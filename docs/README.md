@@ -18,7 +18,7 @@ uTube is a web application inspired by Youtube built using Ruby on Rails and Rea
 * [Sample State][sample-state]
 
 [wireframes]: docs/wireframes
-[components]: docs/component-hierarchy.md
+[components]: /component-hierarchy.md
 [sample-state]: docs/sample-state.md
 [api-endpoints]: docs/api-endpoints.md
 [schema]: /schema.md
@@ -51,7 +51,6 @@ the API.
 **Objective:** Add infinite scroll to Notes Index
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Search Form and Engine
+- [ ] Dislikes
+- [ ] Playlists
