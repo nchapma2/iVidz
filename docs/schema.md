@@ -16,8 +16,9 @@ id          | integer   | not null, primary key
 title       | string    | not null
 description | text      | not null
 uploader_id | integer   | not null, foreign key (references users), indexed
-mp4_url     | string    | not null
-
+video_url   | string    | not null
+views       | integer   | not null
+likes       | integer   | not null
 
 ## comments
 column name | data type | details
@@ -25,6 +26,7 @@ column name | data type | details
 id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
 body        | text      | not null
+likes       | integer   | not null
 
 
 ## likes
