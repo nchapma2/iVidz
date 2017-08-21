@@ -31,7 +31,7 @@
     + Likes
   - Comments
 
-**UserHomeContainer**
+**UserShowContainer**
   - ChannelHeader
   - VideoDetail
   - Feeds
