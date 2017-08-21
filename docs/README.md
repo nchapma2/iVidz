@@ -1,3 +1,9 @@
+# uTube
+
+[Trello link][trello]
+
+[trello]: https://trello.com/b/TDY3NdYF/utube
+
 ## Minimum Viable Product
 
 uTube is a web application inspired by Youtube built using Ruby on Rails and React/Redux. The app will have features implemented smoothly, with bug-free navigation and a seeded database to allow for use of all following:
