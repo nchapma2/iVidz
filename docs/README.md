@@ -27,28 +27,27 @@ uTube is a web application inspired by Youtube built using Ruby on Rails and Rea
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
 
-**Objective:** Functioning rails project with front-end Authentication
+**Objective:** Get a functioning rails project with front-end Authentication up and running
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Video Model, API, and components (2 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
-the API.
+**Objective:** Videos can be uploaded, destroyed, read and edited through the API
 
-### Phase 3: Notebooks (2 days)
+### Phase 3: Comments (2 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Comments can belong to videos or other comments and can be created, read, edited and destroyed through the API
 
-### Phase 4: Tags (1 day)
+### Phase 4: Subscriptions and Likes (1 day)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** Both subscriptions and likes can be created and destroyed
 
-### Phase 5: Allow Complex Styling in Notes (1 day, W2 Th 6pm)
+### Phase 5: CSS Styling on Main Pages (1 day)
 
-**Objective:** Allow rich text editing of notes.
+**Objective:** Create and implement a common theme using CSS to beautify the app
 
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
+### Phase 6: - Potential Search Form and Engine (TBD)
 
-**Objective:** Add infinite scroll to Notes Index
+**Objective:** Adds search bar to the header
 
 ### Bonus Features (TBD)
 - [ ] Search Form and Engine
