@@ -1,23 +1,24 @@
-## Component Heirarchy
+## Component Hierarchy
 
 **SessionFormContainer**
   - SessionForm
 
-**HeaderContainer**
-  - Header
+**Navbar**
+  - Navbar
     + Searchbar
       - SearchbarForm
-    + Hamburger Dropdown
+    + Dropdown for toggleable secondary Navbar
   - AppBar
 
 **HomeContainer**
   - Home
-    + HomeIndex
-    + Feeds
+    + VideoIndex
+      - VideoIndexItems
 
 **SearchContainer**
   - SearchResults
     + VideoIndex
+      - VideoIndexItems
 
 **VideoUploadContainer**
   - VideoUpload
@@ -28,14 +29,11 @@
   - VideoPlayer
   - VideoDetail
     + Likes
-  - VerticalFeed
   - Comments
 
 **UserHomeContainer**
   - ChannelHeader
-  - VideoPlayer
   - VideoDetail
-  - VideoIndex
   - Feeds
 
 
