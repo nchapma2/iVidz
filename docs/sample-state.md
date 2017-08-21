@@ -18,6 +18,12 @@
     video_url: '/dog_videos/video_4',
     likes: 1337,
     views: 9001
+    comments: {
+      id: 80,
+      author_id: 1,
+      body: 'Testing out comments',
+      likes: 11
+    }
   },
   videos: {
     3: {
@@ -28,6 +34,9 @@
       video_url: '/dog_videos/video_4',
       likes: 1337,
       views: 9001
+      comments: {
+
+      }
     }
     4: {
       id: 5,
@@ -36,7 +45,10 @@
       uploader_id: 1,
       video_url: '/cat_videos/video_9',
       likes: 867,
-      views: 5309
+      views: 5309,
+      comments: {
+        
+      }
     }
   }
 }
