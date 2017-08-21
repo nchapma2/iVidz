@@ -17,10 +17,10 @@ uTube is a web application inspired by Youtube built using Ruby on Rails and Rea
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: docs/wireframes
-[components]: /component-hierarchy.md
-[sample-state]: docs/sample-state.md
-[api-endpoints]: docs/api-endpoints.md
+[wireframes]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/wireframes
+[components]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/component-hierarchy.md
+[sample-state]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/sample-state.md
+[api-endpoints]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/api-endpoints.md
 [schema]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/schema.md
 
 ## Implementation Timeline
