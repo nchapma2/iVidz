@@ -23,6 +23,7 @@
       author_id: 1,
       body: 'Testing out comments',
       likes: 11
+      video_id: 3
     }
   },
   videos: {
@@ -47,7 +48,7 @@
       likes: 867,
       views: 5309,
       comments: {
-        
+
       }
     }
   }
