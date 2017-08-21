@@ -5,8 +5,7 @@
 
 **Navbar**
   - Navbar
-    + Searchbar
-      - SearchbarForm
+    + SearchForm
     + Dropdown for toggleable secondary Navbar
   - AppBar
 
@@ -16,7 +15,7 @@
       - VideoIndexItems
 
 **SearchContainer**
-  - SearchResults
+  - SearchForm
     + VideoIndex
       - VideoIndexItems
 
@@ -34,7 +33,6 @@
 **UserShowContainer**
   - ChannelHeader
   - VideoDetail
-  - Feeds
 
 
 
