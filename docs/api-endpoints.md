@@ -29,15 +29,6 @@
 - `GET /api/video/:id`
 - `DELETE /api/video/:id`
 
-### Notebooks
-
-- `GET /api/notebooks`
-- `POST /api/notebooks`
-- `GET /api/notebooks/:id`
-- `DELETE /api/notebooks/:id`
-- `GET /api/notebooks/:id/notes`
-  - index of all notes for a notebook
-  - accepts pagination params (if I get there)
 
 ### Comments
 
