@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => (
   <div>
-    <h1>uTube</h1>
+    <h1>Welcome to uTube</h1>
   </div>
 );
 
