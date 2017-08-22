@@ -6,24 +6,11 @@
       username: 'Sample Sam'
     },
     forms: {
-      signUp: {errors: []},
-      logIn: {errors: []}
+      errors: []
     }
   }
   currentVideo: {
-    id: 3,
-    title: 'Amazing Video!',
-    description: 'Sample vid',
-    uploader_id: 1,
-    video_url: '/dog_videos/video_4',
-    likes: 1337,
-    views: 9001
-    comments: {
-      id: 80,
-      author_id: 1,
-      body: 'Testing out comments',
-      likes: 11
-      video_id: 3
+    id: 3
     }
   },
   videos: {
