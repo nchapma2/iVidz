@@ -39,16 +39,32 @@ class SessionForm extends React.Component {
       return (
         <div>
           <h3>Welcome Back to uTube!</h3>
+          <h4>Please log in</h4>
           <br/>
-          <Link to='/signup'>Sign Up Instead!</Link>)
+          <Link to='/signup'>Sign Up Instead!</Link>
         </div>
       );} else {
       return(
         <div>
           <h3>Welcome to uTube!</h3>
+          <h4>Please sign up</h4>
           <br/>
-          <Link to='/login'>Login Instead!</Link>;
+          <Link to='/login'>Login Instead!</Link>
         </div>
+      );
+    }
+  }
+
+  renderEmail() {
+    if(this.props.formType === 'signup'){
+      return(
+        <label>Email:
+          <input type="text"
+            value={this.state.email}
+            onChange={this.update('email')}
+            className='login-field'
+            />
+        </label>
       );
     }
   }
@@ -71,13 +87,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className='login-form'>
           {this.navLink()}
           <br/>
-          <label>Email:
-            <input type="text"
-              value={this.state.email}
-              onChange={this.update('email')}
-              className='login-field'
-              />
-          </label>
+          {this.renderEmail()}
           <br/>
           <label>Username:
             <input type="text"
