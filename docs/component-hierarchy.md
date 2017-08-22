@@ -3,11 +3,11 @@
 **SessionFormContainer**
   - SessionForm
 
-**Navbar**
-  - Navbar
-    + SearchForm
-    + Dropdown for toggleable secondary Navbar
-  - AppBar
+**NavbarContainer**
+  - Navbar 
+  - SearchForm
+  - Dropdown for toggleable secondary Navbar
+
 
 **HomeContainer**
   - Home
