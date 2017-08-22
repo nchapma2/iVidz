@@ -32,7 +32,7 @@ class Navbar extends React.Component {
       <h1>uTube</h1>
       <div>Logo Here</div>
       <span>SearchBar</span>
-      {this.greeting()}
+      { this.greeting() }
     </div>
     );
   }
