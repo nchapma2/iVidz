@@ -46,8 +46,8 @@ class SessionForm extends React.Component {
       );} else {
       return(
         <div className='login-form-head'>
-          <h3>Welcome to uTube!</h3>
-          <h4>Please sign up</h4>
+          <h3>Sign Up</h3>
+          <h5>to continue to uTube</h5>
           <br/>
           <Link to='/login'>Login Instead!</Link>
         </div>
@@ -59,11 +59,12 @@ class SessionForm extends React.Component {
     if(this.props.formType === 'signup'){
       return(
         <label className='field-label'>
-          <span>Email: </span>
           <input type="text"
             value={this.state.email}
             onChange={this.update('email')}
             className='login-field'
+            placeholder='Enter your email'
+            required
             />
         </label>
       );
@@ -91,24 +92,26 @@ class SessionForm extends React.Component {
           {this.renderEmail()}
           <br/>
           <label className='field-label'>
-            <span>Username: </span>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
               className='login-field'
+              placeholder='Enter your username'
+              required
               />
           </label>
           <br/>
           <label className='field-label'>
-            <span>Password (at least six characters): </span>
             <input type="password"
+              placeholder="Enter your password"
               value={this.state.password}
               onChange={this.update('password')}
               className='login-field'
+              required
               />
           </label>
           <br/>
-          <input type='submit' value='Submit'/>
+          <input type='submit' value='Sign Up!' className='submit-button'/>
         </form>
       </div>
     );
