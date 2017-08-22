@@ -29,6 +29,7 @@ class Navbar extends React.Component {
     return(
     <div className='navbar'>
       <p className='hamburger-dropdown'>HamburgerButtonDropdown</p>
+      <h1>uTube</h1>
       <div>Logo Here</div>
       <span>SearchBar</span>
       {this.greeting()}

@@ -37,7 +37,7 @@ class SessionForm extends React.Component {
   navLink() {
     if(this.props.formType === 'login'){
       return (
-        <div>
+        <div className='login-form-head'>
           <h3>Welcome Back to uTube!</h3>
           <h4>Please log in</h4>
           <br/>
@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
         </div>
       );} else {
       return(
-        <div>
+        <div className='login-form-head'>
           <h3>Welcome to uTube!</h3>
           <h4>Please sign up</h4>
           <br/>
@@ -58,7 +58,8 @@ class SessionForm extends React.Component {
   renderEmail() {
     if(this.props.formType === 'signup'){
       return(
-        <label>Email:
+        <label className='field-label'>
+          <span>Email: </span>
           <input type="text"
             value={this.state.email}
             onChange={this.update('email')}
@@ -84,12 +85,13 @@ class SessionForm extends React.Component {
   render() {
     return(
       <div className='login-form-container'>
+        {this.navLink()}
         <form onSubmit={this.handleSubmit} className='login-form'>
-          {this.navLink()}
           <br/>
           {this.renderEmail()}
           <br/>
-          <label>Username:
+          <label className='field-label'>
+            <span>Username: </span>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -97,7 +99,8 @@ class SessionForm extends React.Component {
               />
           </label>
           <br/>
-          <label>Password (at least six characters):
+          <label className='field-label'>
+            <span>Password (at least six characters): </span>
             <input type="password"
               value={this.state.password}
               onChange={this.update('password')}

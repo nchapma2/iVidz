@@ -8,9 +8,9 @@ import NavbarContainer from './navbar/navbar_container';
 const App = () => (
   <div>
     <header className='header'>
-      <h1>uTube</h1>
       <NavbarContainer />
     </header>
+    <Route exact path='/' />
     <AuthRoute path='/login' component={SessionFormContainer}/>
     <AuthRoute path='/signup' component={SessionFormContainer}/>
   </div>
