@@ -5,9 +5,7 @@
       id: 1,
       username: 'Sample Sam'
     },
-    forms: {
-      errors: []
-    }
+    errors: []
   }
   currentVideo: {
     id: 3
