@@ -1,15 +1,18 @@
 import React from 'react';
 import SessionFormContainer from './session_form/session_form_container';
-import { Route } from 'react-router';
+import { Route } from 'react-router-dom';
+import { AuthRoute } from '../util/route_util';
+import NavbarContainer from './navbar/navbar_container';
+
 
 const App = () => (
   <div>
-    <header>
-      <h1>Welcome to uTube</h1>
-
+    <header className='header'>
+      <h1>uTube</h1>
+      <NavbarContainer />
     </header>
-    <Route path='/login' component={SessionFormContainer}/>
-    <Route path='/signup' component={SessionFormContainer}/>
+    <AuthRoute path='/login' component={SessionFormContainer}/>
+    <AuthRoute path='/signup' component={SessionFormContainer}/>
   </div>
 );
 
