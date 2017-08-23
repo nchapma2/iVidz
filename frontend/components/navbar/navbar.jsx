@@ -5,6 +5,18 @@ class Navbar extends React.Component {
 
   constructor(props){
     super(props);
+    this.state = {
+      active: false
+    };
+    this.toggleDropdown = this.toggleDropdown.bind(this);
+  }
+
+  toggleDropdown(e) {
+    // display none in CSS
+    // add onclick handler, have state for active class or not
+    e.preventDefault();
+    const setClass = !this.state.active;
+    this.setState({ active: setClass });
   }
 
   greeting() {
@@ -12,11 +24,14 @@ class Navbar extends React.Component {
     if(this.props.currentUser){
       return (
         <div className='greeting-div'>
-          <div className='avatar-circle user-dropdown' >
+          <div className='avatar-circle user-dropdown' onClick={this.toggleDropdown} >
             <span className='initials'>{this.props.currentUser.username.slice(0,1)}</span>
+            <div className={this.state.active ? 'active' : 'inactive'}>
+              <Link to={`/api/users/${this.props.currentUser.id}`}>{this.props.currentUser.email}</Link>
+              <button className='logout-button' onClick={this.props.logout}>Log Out</button>
+            </div>
           </div>
           <br/>
-          <button className='logout-button' onClick={this.props.logout}>Log Out</button>
         </div>
       );
     } else {

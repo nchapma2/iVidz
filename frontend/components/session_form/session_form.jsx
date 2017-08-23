@@ -28,7 +28,8 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if(this.state.formPage === 1){
+
+    if(this.state.formPage === 1 && this.props.formType === 'login'){
       return(
         this.setState({
           email: this.state.email,
@@ -38,12 +39,8 @@ class SessionForm extends React.Component {
         })
       );
     } else {
-      debugger
       const user = Object.assign({}, this.state);
-      this.props.processForm(user)
-        .then(() => {
-          this.setState({username: "", email: "", password: "", formPage: 1});
-        });
+      this.props.processForm(user);
       }
   }
 
@@ -54,6 +51,7 @@ class SessionForm extends React.Component {
           <h1>iVidz</h1>
           <br/>
           <h4>Please log in</h4>
+          <br/>
           <br/>
           <Link to='/signup'>Sign Up Instead!</Link>
         </div>
@@ -185,7 +183,8 @@ class SessionForm extends React.Component {
 
       <div className='login-form-container'>
         {this.navLink()}
-
+        <br/>
+        <br/>
         <form onSubmit={this.handleSubmit} className='login-form'>
           <br/>
           {this.renderSignup()}
