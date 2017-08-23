@@ -1,0 +1,47 @@
+
+.header {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  padding: 10px;
+  margin-bottom: 100px;
+  color: white;
+  background-color: black;
+}
+
+.greeting-div {
+  display: flex;
+}
+
+.greeting-div > * {
+  padding: 10px;
+}
+
+.navbar {
+  align-items: center;
+  align-content: space-between;
+  width: 100%;
+}
+
+.navbar > * {
+  padding: 10px;
+  margin: auto;
+}
+
+.navbar-session-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a {
+  padding: 10px;
+  display: block;
+}

@@ -11,7 +11,8 @@ class Navbar extends React.Component {
     if(this.props.currentUser){
       return (
         <div className='greeting-div'>
-          <h2>Hello, {this.props.currentUser.username}</h2>
+          <h4>Hello, {this.props.currentUser.username}</h4>
+          <br/>
           <button className='logout-button' onClick={this.props.logout}>Log Out</button>
         </div>
       );

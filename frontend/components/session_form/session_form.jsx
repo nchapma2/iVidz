@@ -17,6 +17,9 @@ class SessionForm extends React.Component {
     if(nextProps.loggedIn) {
       this.props.history.push('/');
     }
+    // if(!nextProps.errors){
+    //
+    // }
   }
 
   update(property) {
@@ -89,10 +92,22 @@ class SessionForm extends React.Component {
     return(
       <div className='login-form-container'>
         {this.navLink()}
-        {this.renderErrors()}
+
         <form onSubmit={this.handleSubmit} className='login-form'>
           <br/>
-          {this.renderEmail()}
+          {this.props.formType === 'signup' &&
+            <label className='field-label'>
+              Email:
+            </label>}
+            {this.props.formType === 'signup' &&
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className='login-field'
+                placeholder='Enter your email'
+                required
+                />
+            }
           <br/>
           <label className='field-label'>
             Username:
@@ -116,6 +131,7 @@ class SessionForm extends React.Component {
               required
               />
           <br/>
+          {this.renderErrors()}
           <br/>
           <input type='submit' value={
               this.props.formType === 'login' ? 'Log In!' : 'Sign Up!'

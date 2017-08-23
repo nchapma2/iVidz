@@ -20,7 +20,17 @@
   bottom: 30px;
  }
 
+.error-list {
+  list-style: none;
+}
 
+.error-list > * {
+  color: red;
+}
+
+.logout-button {
+
+}
 
 .field-label {
   display: flex;
