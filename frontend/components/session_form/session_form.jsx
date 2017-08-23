@@ -39,6 +39,7 @@ class SessionForm extends React.Component {
       return (
         <div className='login-form-head'>
           <h3>Welcome Back to uTube!</h3>
+          <br/>
           <h4>Please log in</h4>
           <br/>
           <Link to='/signup'>Sign Up Instead!</Link>
@@ -47,6 +48,7 @@ class SessionForm extends React.Component {
       return(
         <div className='login-form-head'>
           <h3>Sign Up</h3>
+          <br/>
           <h5>to continue to uTube</h5>
           <br/>
           <Link to='/login'>Login Instead!</Link>
