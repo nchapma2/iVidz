@@ -1,7 +1,9 @@
 # iVidz
 
+[Heroku link][heroku]
 [Trello link][trello]
 
+[heroku]: https://ividz.herokuapp.com/
 [trello]: https://trello.com/b/TDY3NdYF/ividz
 
 ## Minimum Viable Product
