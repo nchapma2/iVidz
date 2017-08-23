@@ -18,11 +18,8 @@
       description: 'Sample vid',
       uploader_id: 1,
       video_url: '/dog_videos/video_4',
-      likes: 1337,
-      views: 9001
-      comments: {
-
-      }
+      views: 1337,
+      comments_ids: [1, 4, 5]
     }
     4: {
       id: 5,
@@ -30,11 +27,22 @@
       description: 'Sample vid 2 ',
       uploader_id: 1,
       video_url: '/cat_videos/video_9',
-      likes: 867,
       views: 5309,
-      comments: {
-
-      }
+      comments_ids: [3, 12, 16]
+    }
+  },
+  comments: {
+    28: {
+      id: 28,
+      author_id: 1,
+      body: 'Man, that cat can really flip!',
+      video_id: 4
+    },
+    73: {
+      id: 73,
+      author_id: 2,
+      body: "I'm so jealous!",
+      video_id: 4
     }
   }
 }
