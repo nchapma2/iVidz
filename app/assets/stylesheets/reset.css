@@ -13,7 +13,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Courier New", monospace;
+  /*font-family: 'Roboto', sans-serif;*/
   vertical-align: baseline;
   display: inherit;
 }

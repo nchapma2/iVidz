@@ -8,6 +8,7 @@ class SessionForm extends React.Component {
       email: "",
       username: "",
       password: "",
+      formPage: 1
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -89,6 +90,9 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
+
+
     return(
       <div className='login-form-container'>
         {this.navLink()}

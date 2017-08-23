@@ -9,12 +9,44 @@
   background-color: black;
 }
 
+.avatar-circle {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+}
+
+.initials {
+  position: relative;
+  align-self: center;
+  // top: 25px; /* 25% of parent */
+  font-size: 50px; /* 50% of parent */
+  line-height: 50px; /* 50% of parent */
+  color: black;
+
+  font-weight: bold;
+}
+
+.hamburger {
+  height: 40px;
+}
+
 .greeting-div {
   display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+.fa {
+  background-color: white
 }
 
 .greeting-div > * {
   padding: 10px;
+
 }
 
 .navbar {
@@ -28,9 +60,8 @@
   margin: auto;
 }
 
-.navbar-session-links {
-  display: flex;
-  justify-content: space-between;
+.navbar-session-links > * {
+  padding: 10px;
 }
 
 a:link {

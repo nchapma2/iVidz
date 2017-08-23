@@ -8,10 +8,13 @@ class Navbar extends React.Component {
   }
 
   greeting() {
+
     if(this.props.currentUser){
       return (
         <div className='greeting-div'>
-          <h4>Hello, {this.props.currentUser.username}</h4>
+          <div className='avatar-circle user-dropdown' onClick="dropDown">
+            <span className='initials'>{this.props.currentUser.username.slice(0,1)}</span>
+          </div>
           <br/>
           <button className='logout-button' onClick={this.props.logout}>Log Out</button>
         </div>
@@ -29,7 +32,8 @@ class Navbar extends React.Component {
   render() {
     return(
     <div className='navbar'>
-      <p className='hamburger-dropdown'>HamburgerButtonDropdown</p>
+      <input className='hamburger' type="image"
+        src="http://estes-park.com/sites/all/themes/estesparktwo/images/hamburger.png" />
       <h1>iVidz</h1>
       <div>Logo Here</div>
       <input type='text'
