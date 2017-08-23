@@ -12,7 +12,7 @@ class Navbar extends React.Component {
     if(this.props.currentUser){
       return (
         <div className='greeting-div'>
-          <div className='avatar-circle user-dropdown' onClick="dropDown">
+          <div className='avatar-circle user-dropdown' >
             <span className='initials'>{this.props.currentUser.username.slice(0,1)}</span>
           </div>
           <br/>
