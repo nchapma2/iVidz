@@ -45,6 +45,7 @@ body {
 
 .navbar > * {
   padding: 10px;
+  margin: auto;
 }
 
 .navbar-session-links {
