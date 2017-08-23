@@ -16,7 +16,7 @@
 
 body {
   background-image: url('brick-background.png');
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
 }
 
@@ -63,6 +63,7 @@ a:visited {
 
 a {
   padding: 10px;
+  display: block;
 }
 
 

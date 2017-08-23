@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 1px 1px 0 0 lightgrey;
   border: 1px solid white;
   border-radius: 3px 3px 3px 3px;
   margin: auto;
@@ -49,6 +48,10 @@
    margin: auto;
    padding: 10px;
    width: 50%;
+ }
+
+ .field-label {
+   font-size: 12px;
  }
 
  .login-form-head {

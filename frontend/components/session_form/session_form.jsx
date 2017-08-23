@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     if(this.props.formType === 'login'){
       return (
         <div className='login-form-head'>
-          <h3>Welcome Back to iVidz!</h3>
+          <h1>iVidz</h1>
           <br/>
           <h4>Please log in</h4>
           <br/>
@@ -94,6 +94,8 @@ class SessionForm extends React.Component {
           {this.renderEmail()}
           <br/>
           <label className='field-label'>
+            Username:
+          </label>
             <input type="text"
               value={this.state.username}
               onChange={this.update('username')}
@@ -101,9 +103,10 @@ class SessionForm extends React.Component {
               placeholder='Enter your username'
               required
               />
-          </label>
           <br/>
           <label className='field-label'>
+            Password:
+          </label>
             <input type="password"
               placeholder="Enter your password"
               value={this.state.password}
@@ -111,9 +114,12 @@ class SessionForm extends React.Component {
               className='login-field'
               required
               />
-          </label>
           <br/>
-          <input type='submit' value='Sign Up!' className='submit-button'/>
+          <br/>
+          <input type='submit' value={
+              this.props.formType === 'login' ? 'Log In!' : 'Sign Up!'
+              }
+              className='submit-button'/>
         </form>
       </div>
     );

@@ -31,7 +31,9 @@ class Navbar extends React.Component {
       <p className='hamburger-dropdown'>HamburgerButtonDropdown</p>
       <h1>iVidz</h1>
       <div>Logo Here</div>
-      <span>SearchBar</span>
+      <input type='text'
+        placeholder='Search'
+        />
       { this.greeting() }
     </div>
     );
