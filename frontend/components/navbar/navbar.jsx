@@ -55,7 +55,7 @@ class Navbar extends React.Component {
         placeholder='Search'
         />
       <Link to='/upload'>
-        <img alt='upload' className='upload-icon' src='upload-icon.png'></img>
+        <img alt='upload' className='upload-icon' src={window.upload}></img>
       </Link>
       { this.greeting() }
     </div>

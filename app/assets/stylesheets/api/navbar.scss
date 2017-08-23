@@ -88,6 +88,12 @@ a {
   align-self: center;
 }
 
+.upload-icon {
+  filter: invert(100%);
+  width: 50px;
+  height: 50px;
+}
+
 .inactive {
   display: none;
 }
@@ -105,8 +111,6 @@ a {
   margin: auto;
   right: -50px;
   top: 50px;
-  // right: 10px;
-  // top:auto;
   background-color: black;
   border: 1px solid white;
 }
