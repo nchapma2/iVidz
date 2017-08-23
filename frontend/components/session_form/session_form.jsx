@@ -18,9 +18,6 @@ class SessionForm extends React.Component {
     if(nextProps.loggedIn) {
       this.props.history.push('/');
     }
-    // if(!nextProps.errors){
-    //
-    // }
   }
 
   update(property) {
@@ -31,11 +28,23 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const user = Object.assign({}, this.state);
-    this.props.processForm(user)
-      .then(() => {
-        this.setState({username: "", email: "", password: ""});
-      });
+    if(this.state.formPage === 1){
+      return(
+        this.setState({
+          email: this.state.email,
+          username: this.state.username,
+          password: this.state.password,
+          formPage: 2
+        })
+      );
+    } else {
+      debugger
+      const user = Object.assign({}, this.state);
+      this.props.processForm(user)
+        .then(() => {
+          this.setState({username: "", email: "", password: "", formPage: 1});
+        });
+      }
   }
 
   navLink() {
@@ -61,19 +70,100 @@ class SessionForm extends React.Component {
     }
   }
 
-  renderEmail() {
+  renderSignup() {
     if(this.props.formType === 'signup'){
       return(
-        <label className='field-label'>
-          <input type="text"
-            value={this.state.email}
-            onChange={this.update('email')}
-            className='login-field'
-            placeholder='Enter your email'
-            required
-            />
-        </label>
+        <div className='signup-div'>
+          <div className='input-div'>
+            <label className='field-label'>
+              Email:
+            </label>
+              <input type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className='login-field'
+                placeholder='Enter your email'
+                required
+                />
+          </div>
+          <br/>
+            <div className='input-div'>
+              <label className='field-label'>
+                Username:
+              </label>
+              <input type="text"
+                value={this.state.username}
+                onChange={this.update('username')}
+                className='login-field'
+                placeholder='Enter your username'
+                required
+              />
+            </div>
+            <br/>
+              <div className='input-div'>
+                <label className='field-label'>
+                  Password:
+                </label>
+                  <input type="password"
+                    placeholder="Enter your password"
+                    value={this.state.password}
+                    onChange={this.update('password')}
+                    className='login-field'
+                    required
+                    />
+              </div>
+          </div>
       );
+    }
+  }
+
+  renderForm() {
+    if(this.state.formPage === 1 && this.props.formType === 'login'){
+      return(
+        <div className='input-div'>
+          <label className='field-label'>
+            Username:
+          </label>
+          <input type="text"
+            value={this.state.username}
+            onChange={this.update('username')}
+            className='login-field'
+            placeholder='Enter your username'
+            required
+          />
+        </div>
+      );
+    } else if(this.props.formType === 'login' && this.state.formPage === 2) {
+      return(
+        <div className='input-div'>
+          <label className='field-label'>
+            Password:
+          </label>
+            <input type="password"
+              placeholder="Enter your password"
+              value={this.state.password}
+              onChange={this.update('password')}
+              className='login-field'
+              required
+            />
+          </div>
+      );
+    }
+  }
+
+  renderSubmit() {
+    if(this.props.formType === 'signup'){
+      return(
+        <input type='submit' value='Sign Up!' className='submit-button'/>
+      );
+    } else if(this.state.formPage === 1){
+      return(
+        <input type='submit' value='Next' className='submit-button'/>
+        );
+    } else if(this.state.formPage === 2) {
+      return(
+        <input type='submit' value='Log In!' className='submit-button'/>
+        );
     }
   }
 
@@ -91,56 +181,20 @@ class SessionForm extends React.Component {
 
   render() {
 
-
-
     return(
+
       <div className='login-form-container'>
         {this.navLink()}
 
         <form onSubmit={this.handleSubmit} className='login-form'>
           <br/>
-          {this.props.formType === 'signup' &&
-            <label className='field-label'>
-              Email:
-            </label>}
-            {this.props.formType === 'signup' &&
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className='login-field'
-                placeholder='Enter your email'
-                required
-                />
-            }
+          {this.renderSignup()}
           <br/>
-          <label className='field-label'>
-            Username:
-          </label>
-            <input type="text"
-              value={this.state.username}
-              onChange={this.update('username')}
-              className='login-field'
-              placeholder='Enter your username'
-              required
-              />
-          <br/>
-          <label className='field-label'>
-            Password:
-          </label>
-            <input type="password"
-              placeholder="Enter your password"
-              value={this.state.password}
-              onChange={this.update('password')}
-              className='login-field'
-              required
-              />
+          {this.renderForm()}
           <br/>
           {this.renderErrors()}
           <br/>
-          <input type='submit' value={
-              this.props.formType === 'login' ? 'Log In!' : 'Sign Up!'
-              }
-              className='submit-button'/>
+          {this.renderSubmit()}
         </form>
       </div>
     );

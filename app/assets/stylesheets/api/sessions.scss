@@ -28,26 +28,26 @@
   color: red;
 }
 
-.logout-button {
-
-}
 
 .field-label {
   display: flex;
+  justify-content: flex-start;
   padding: 10px;
   color: white;
 }
 
-.field-label span {
-  align-content: flex-start;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
+
+.signup-div {
+  display: flex;
+  flex-direction: column;
 }
 
-.field-label input {
-
+.input-div {
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .login-form {
    display: flex;
