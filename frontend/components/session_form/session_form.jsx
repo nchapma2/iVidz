@@ -18,6 +18,14 @@ class SessionForm extends React.Component {
     if(nextProps.loggedIn) {
       this.props.history.push('/');
     }
+    if(nextProps.errors){
+      this.setState({
+        email: "",
+        username: "",
+        password: "",
+        formPage: 1
+      });
+    }
   }
 
   update(property) {
@@ -53,7 +61,7 @@ class SessionForm extends React.Component {
           <h4>Please log in</h4>
           <br/>
           <br/>
-          <Link to='/signup'>Sign Up Instead!</Link>
+          <Link to='/signup' onClick={this.props.clearErrors}>Sign Up Instead!</Link>
         </div>
       );} else {
       return(
@@ -62,7 +70,7 @@ class SessionForm extends React.Component {
           <br/>
           <h5>to continue to iVidz</h5>
           <br/>
-          <Link to='/login'>Login Instead!</Link>
+          <Link to='/login' onClick={this.props.clearErrors}>Login Instead!</Link>
         </div>
       );
     }
@@ -178,7 +186,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-
     return(
 
       <div className='login-form-container'>
@@ -191,7 +198,9 @@ class SessionForm extends React.Component {
           <br/>
           {this.renderForm()}
           <br/>
-          {this.renderErrors()}
+          {this.props.errors &&
+            this.renderErrors()
+          }
           <br/>
           {this.renderSubmit()}
         </form>
