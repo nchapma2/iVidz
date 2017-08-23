@@ -34,13 +34,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nchapma2/uTube-Proposal.git"
+    "url": "git+https://github.com/nchapma2/iVidz.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nchapma2/uTube-Proposal/issues"
+    "url": "https://github.com/nchapma2/iVidz/issues"
   },
-  "homepage": "https://github.com/nchapma2/uTube-Proposal#readme"
+  "homepage": "https://github.com/nchapma2/iVidz#readme"
 }

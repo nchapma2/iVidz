@@ -1,12 +1,12 @@
-# uTube
+# iVidz
 
 [Trello link][trello]
 
-[trello]: https://trello.com/b/TDY3NdYF/utube
+[trello]: https://trello.com/b/TDY3NdYF/ividz
 
 ## Minimum Viable Product
 
-uTube is a web application inspired by Youtube built using Ruby on Rails and React/Redux. The app will have features implemented smoothly, with bug-free navigation and a seeded database to allow for use of all following:
+iVidz is a web application inspired by Youtube built using Ruby on Rails and React/Redux. The app will have features implemented smoothly, with bug-free navigation and a seeded database to allow for use of all following:
 
 - [ ] Hosting on Heroku
 - [ ] New account creation, login, and guest/demo login
@@ -23,11 +23,11 @@ uTube is a web application inspired by Youtube built using Ruby on Rails and Rea
 * [DB schema][schema]
 * [Sample State][sample-state]
 
-[wireframes]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/wireframes
-[components]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/component-hierarchy.md
-[sample-state]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/sample-state.md
-[api-endpoints]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/api-endpoints.md
-[schema]: https://github.com/nchapma2/uTube-Proposal/blob/master/docs/schema.md
+[wireframes]: https://github.com/nchapma2/iVidz-Proposal/blob/master/docs/wireframes
+[components]: https://github.com/nchapma2/iVidz-Proposal/blob/master/docs/component-hierarchy.md
+[sample-state]: https://github.com/nchapma2/iVidz-Proposal/blob/master/docs/sample-state.md
+[api-endpoints]: https://github.com/nchapma2/iVidz-Proposal/blob/master/docs/api-endpoints.md
+[schema]: https://github.com/nchapma2/iVidz-Proposal/blob/master/docs/schema.md
 
 ## Implementation Timeline
 
