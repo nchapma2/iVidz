@@ -15,11 +15,12 @@
  */
 
 body {
-  background-image: url('apple-background.jpg');
+  background-image: url('brick-background.png');
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
-  
+
 
 #root {
   width: 100%;
@@ -33,13 +34,36 @@ body {
   padding: 10px;
   margin-bottom: 100px;
   color: white;
+  background-color: black;
 }
 
 .navbar {
   align-items: center;
   align-content: space-between;
-
+  width: 100%;
 }
+
+.navbar > * {
+  padding: 10px;
+}
+
+.navbar-session-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a {
+  padding: 10px;
+}
+
 
 h1 {
   font-size: 50px;
