@@ -28,7 +28,7 @@ export const receiveCancel = () => ({
   type: RECEIVE_CANCEL
 });
 
-export const cancel = dispatch => {
+export const cancel = () => dispatch => {
   dispatch(receiveCancel());
 };
 

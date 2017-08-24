@@ -4,7 +4,8 @@ import { login,
   logout,
   signup,
   clearErrors,
-  checkUsername
+  checkUsername,
+  cancel
   } from '../../actions/session_actions';
 
 import SessionForm from './session_form';
@@ -22,6 +23,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
     processForm: user => dispatch(processForm(user)),
     clearErrors: () => dispatch(clearErrors()),
     checkUsername: (username) => dispatch(checkUsername(username)),
+    cancel: () => dispatch(cancel()),
     formType
   }
 }

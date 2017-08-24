@@ -32,7 +32,6 @@
   display: flex;
   justify-content: flex-start;
   padding-bottom: 5px
-
 }
 
 .signup-div {
@@ -70,7 +69,7 @@
   border-bottom: 1px solid lightgrey;
   width: 80%;
   padding: 10px;
-
+  font-size: 16px;
 }
 
 .login-field:hover {
@@ -82,7 +81,15 @@
    padding: 10px;
  }
 
-
+.cancel-button {
+  width: 40%;
+  border: none;
+  color: blue;
+  background: white;
+  cursor: pointer;
+  padding-top: 5px;
+  left: 10px;
+}
 
  .field-label {
   color: grey;

@@ -60,9 +60,21 @@ class SessionForm extends React.Component {
           <img alt='iVidz' className='session-logo' src={window.logo}></img>
           <br/>
           <br/>
-          <h3>Sign in</h3>
+          {this.props.page === 'user' &&
+            <h3>Sign in</h3>
+          }
+          {this.props.page === 'user' &&
+            <h5>to continue to iVidz</h5>
+          }
 
-          <h5>to continue to iVidz</h5>
+          {this.props.page === 'password' &&
+            <h3>Welcome, {this.state.username}</h3>
+          }
+          {this.props.page === 'password' &&
+            <button className='cancel-button'
+              onClick={this.props.cancel}
+              value="Wrong Username?">Not you?</button>
+          }
           <br/>
         </div>
       );} else {
