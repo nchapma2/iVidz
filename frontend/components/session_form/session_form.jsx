@@ -10,7 +10,7 @@ class SessionForm extends React.Component {
       password: "",
       formPage: 1
     };
-
+    this.guestLogin = this.guestLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -26,6 +26,14 @@ class SessionForm extends React.Component {
         formPage: 1
       });
     }
+  }
+
+  guestLogin() {
+    const user = {
+      username: "guestAccount",
+      password: "hunter12",
+    };
+    this.props.processForm(user);
   }
 
   update(property) {
@@ -54,14 +62,23 @@ class SessionForm extends React.Component {
 
   navLink() {
     if(this.props.formType === 'login'){
+      return <Link to='/signup' onClick={this.props.clearErrors}>Sign Up</Link>;
+    } else {
+      return <Link to='/login' onClick={this.props.clearErrors}>Login</Link>;
+    }
+  }
+
+  formHead() {
+    if(this.props.formType === 'login'){
       return (
         <div className='login-form-head'>
           <h1>iVidz</h1>
           <br/>
-          <h4>Please log in</h4>
           <br/>
+          <h3>Sign in</h3>
+
+          <h5>to continue to iVidz</h5>
           <br/>
-          <Link to='/signup' onClick={this.props.clearErrors}>Sign Up Instead!</Link>
         </div>
       );} else {
       return(
@@ -70,7 +87,6 @@ class SessionForm extends React.Component {
           <br/>
           <h5>to continue to iVidz</h5>
           <br/>
-          <Link to='/login' onClick={this.props.clearErrors}>Login Instead!</Link>
         </div>
       );
     }
@@ -82,7 +98,7 @@ class SessionForm extends React.Component {
         <div className='signup-div'>
           <div className='input-div'>
             <label className='field-label'>
-              Email:
+              Email
             </label>
               <input type="text"
                 value={this.state.email}
@@ -95,7 +111,7 @@ class SessionForm extends React.Component {
           <br/>
             <div className='input-div'>
               <label className='field-label'>
-                Username:
+                Username
               </label>
               <input type="text"
                 value={this.state.username}
@@ -108,7 +124,7 @@ class SessionForm extends React.Component {
             <br/>
               <div className='input-div'>
                 <label className='field-label'>
-                  Password:
+                  Password
                 </label>
                   <input type="password"
                     placeholder="Enter your password"
@@ -128,7 +144,7 @@ class SessionForm extends React.Component {
       return(
         <div className='input-div'>
           <label className='field-label'>
-            Username:
+            Username
           </label>
           <input type="text"
             value={this.state.username}
@@ -143,7 +159,7 @@ class SessionForm extends React.Component {
       return(
         <div className='input-div'>
           <label className='field-label'>
-            Password:
+            Password
           </label>
             <input type="password"
               placeholder="Enter your password"
@@ -164,7 +180,7 @@ class SessionForm extends React.Component {
       );
     } else if(this.state.formPage === 1){
       return(
-        <input type='submit' value='Next' className='submit-button'/>
+        <input type='submit' value='NEXT' className='submit-button'/>
         );
     } else if(this.state.formPage === 2) {
       return(
@@ -187,9 +203,11 @@ class SessionForm extends React.Component {
 
   render() {
     return(
-
       <div className='login-form-container'>
-        {this.navLink()}
+        {this.props.formType === 'login' &&
+          <button className='submit-button guest' onClick={this.guestLogin}>Demo Login</button>
+        }
+        {this.formHead()}
         <br/>
         <br/>
         <form onSubmit={this.handleSubmit} className='login-form'>
@@ -202,8 +220,13 @@ class SessionForm extends React.Component {
             this.renderErrors()
           }
           <br/>
-          {this.renderSubmit()}
+          <div className='form-footer'>
+            {this.navLink()}
+            {this.renderSubmit()}
+          </div>
         </form>
+
+
       </div>
     );
   }

@@ -1,21 +1,33 @@
 
 .header {
-  display: flex;
+  position: absolute;
   width: 100%;
   border-bottom: 1px solid lightgrey;
   padding: 10px;
   margin-bottom: 100px;
-  color: white;
-  background-color: black;
+  background-color: white;
+  height: 50px;
+  // display: inline;
+}
+
+.navbar {
+  position: relative;
+  height: 50px;
+  width: 100%;
+}
+
+.navbar > * {
+  padding: 10px;
+  position: absolute;
 }
 
 .avatar-circle {
   width: 30px;
   height: 30px;
-  background-color: white;
+  background-color: forestgreen;
   text-align: center;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
 }
 
 .avatar-circle:hover {
@@ -28,57 +40,34 @@
   // top: 25px; /* 25% of parent */
   font-size: 50px; /* 50% of parent */
   line-height: 50px; /* 50% of parent */
-  color: black;
+  color: white;
 
   font-weight: bold;
 }
 
 .hamburger {
-  height: 40px;
+  filter: invert(35%);
+  height: 30px;
 }
 
 .greeting-div {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
+  right: 50px;
 }
 
 .fa {
-  background-color: white
+  background-color: white;
 }
 
-.greeting-div > * {
-  padding: 10px;
+.navbar-link {
 
+  right: 50px;
 }
 
-.navbar {
-  align-items: center;
-  align-content: space-between;
-  width: 100%;
+.navbar-session-links {
+  right: 50px;
 }
 
-.navbar > * {
-  padding: 10px;
-  margin: auto;
-}
 
-.navbar-session-links > * {
-  padding: 10px;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a {
-  padding: 10px;
-  display: block;
-}
 
 .logout-button {
   padding: 10px;
@@ -88,6 +77,15 @@ a {
   align-self: center;
 }
 
+a.navbar-link{
+  text-decoration: none;
+ background-color:#167ac6;
+
+ border-radius:3px;
+ color:#fff;
+ margin-right:10px;
+ padding:10px 10px 10px 10px;
+}
 .upload-icon {
   filter: invert(100%);
   width: 50px;

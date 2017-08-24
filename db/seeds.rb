@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
+Video.destroy_all
 
-User.create(username:'MickeyMouse', password:'password1', email:'MickeyMouse@myemail.com')
+new_user = User.create(username:'MickeyMouse', password:'password1', email:'MickeyMouse@myemail.com')
 User.create(username:'DaffyDuck', password:'password2', email:'DaffyDuck@myemail.com')
 User.create(username:'LoneRanger', password:'password3', email:'LoneRanger@myemail.com')
 User.create(username:'SharkBoy', password:'password4', email:'SharkBoy@myemail.com')
 User.create(username:'JacknJill', password:'password5', email:'JacknJill@myemail.com')
+User.create(username: 'guestAccount', password: 'hunter12', email: 'demo@gmail.com')
+
+
+Video.create!(title:'new video1', description:'new video1', uploader_id: new_user.id)
+Video.create(title:'new video2', description:'new video2', uploader_id: new_user.id)
+Video.create(title:'new video3', description:'new video3', uploader_id: new_user.id)

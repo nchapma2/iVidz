@@ -25,7 +25,7 @@ class Navbar extends React.Component {
       return (
         <div className='greeting-div'>
           <div className='avatar-circle user-dropdown' onClick={this.toggleDropdown} >
-            <span className='initials'>{this.props.currentUser.username.slice(0,1)}</span>
+            <span className='initials'>{this.props.currentUser.username.slice(0,1).toUpperCase()}</span>
             <div className={this.state.active ? 'active' : 'inactive'}>
               <Link to={`/api/users/${this.props.currentUser.id}`}>{this.props.currentUser.email}</Link>
               <button className='logout-button' onClick={this.props.logout}>Log Out</button>
@@ -37,8 +37,7 @@ class Navbar extends React.Component {
     } else {
       return (
         <div className='navbar-session-links'>
-          <Link to='/login'>Log In</Link>
-          <Link to='/signup'>Sign Up</Link>
+          <Link className='navbar-link' to='/login'>Sign In</Link>
         </div>
       );
     }
