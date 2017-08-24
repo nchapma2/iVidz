@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
     if(this.props.formType === 'login'){
       return (
         <div className='login-form-head'>
-          <h1>iVidz</h1>
+          <img alt='iVidz' className='session-logo' src={window.logo}></img>
           <br/>
           <br/>
           <h3>Sign in</h3>

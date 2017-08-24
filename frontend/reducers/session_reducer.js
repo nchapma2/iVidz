@@ -1,4 +1,8 @@
-import { RECEIVE_ERRORS, RECEIVE_CURRENT_USER, RECEIVE_USER_SUCCESS } from '../actions/session_actions';
+import { RECEIVE_ERRORS,
+    RECEIVE_CURRENT_USER,
+    RECEIVE_USER_SUCCESS,
+    RECEIVE_CANCEL
+    } from '../actions/session_actions';
 import { merge } from 'lodash';
 
 const nullState = {
@@ -16,7 +20,9 @@ const SessionReducer = (state = nullState, action ) => {
     case RECEIVE_ERRORS:
       return Object.assign({}, state, { errors: action.errors.responseJSON });
     case RECEIVE_USER_SUCCESS:
-      return Object.assign({}, nullState, { page: 'password' } )
+      return Object.assign({}, nullState, { page: 'password' } );
+    case RECEIVE_CANCEL:
+      return nullState;
     default:
       return state;
   }
