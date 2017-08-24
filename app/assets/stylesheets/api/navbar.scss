@@ -7,7 +7,7 @@
   margin-bottom: 100px;
   background-color: white;
   height: 50px;
-  // display: inline;
+
 }
 
 .navbar {
@@ -16,18 +16,36 @@
   width: 100%;
 }
 
+.logo {
+  width: 50%;
+
+  // margin: auto;
+}
+
+.search-input {
+  left: 25%;
+  width: 40%;
+  font-size: 14px;
+  height: 25%;
+  margin-top: 5px;
+}
+
+.home-link {
+  left: 80px;
+}
+
 .navbar > * {
   padding: 10px;
   position: absolute;
 }
 
 .avatar-circle {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background-color: forestgreen;
   text-align: center;
   border-radius: 50%;
-  position: absolute;
+  right: 50px;
 }
 
 .avatar-circle:hover {
@@ -35,11 +53,9 @@
 }
 
 .initials {
-  position: fixed;
-  align-self: center;
-  // top: 25px; /* 25% of parent */
-  font-size: 50px; /* 50% of parent */
-  line-height: 50px; /* 50% of parent */
+  left: 25%;
+  font-size: 25px; /* 50% of parent */
+  padding-top: 5px;
   color: white;
 
   font-weight: bold;
@@ -64,7 +80,7 @@
 }
 
 .navbar-session-links {
-  right: 50px;
+  right: 30px;
 }
 
 
@@ -87,9 +103,13 @@ a.navbar-link{
  padding:10px 10px 10px 10px;
 }
 .upload-icon {
-  filter: invert(100%);
-  width: 50px;
-  height: 50px;
+  filter: invert(65%);
+  width: 35px;
+  height: 35px;
+}
+
+.upload-link {
+  right: 125px;
 }
 
 .inactive {

@@ -48,12 +48,14 @@ class Navbar extends React.Component {
     <div className='navbar'>
       <input className='hamburger' type="image"
         src="http://estes-park.com/sites/all/themes/estesparktwo/images/hamburger.png" />
-      <h1>iVidz</h1>
-      <div>Logo Here</div>
+      <Link to="/" className='home-link'>
+        <img alt='iVidz' className='logo' src={window.logo}></img>
+      </Link>
       <input type='text'
         placeholder='Search'
+        className='search-input'
         />
-      <Link to='/upload'>
+      <Link to='/upload' className='upload-link'>
         <img alt='upload' className='upload-icon' src={window.upload}></img>
       </Link>
       { this.greeting() }
