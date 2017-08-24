@@ -61,4 +61,7 @@ gem 'binding_of_caller'
 gem 'pry-rails'
 gem 'annotate'
 gem 'jquery-rails'
+
 gem 'figaro'
+gem "paperclip", '5.0.0.beta1'
+gem 'aws-sdk', '>=2.0'

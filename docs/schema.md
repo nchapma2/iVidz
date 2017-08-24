@@ -16,8 +16,10 @@ id          | integer   | not null, primary key
 title       | string    | not null
 description | text      | not null
 uploader_id | integer   | not null, foreign key (references users), indexed
-video_url   | string    | not null
+video       | string    | not null (added via paperclip)
+thumbnail   | string    | not null (added via paperclip)
 views       | integer   | not null
+category    | string    | 
 
 
 ## comments
