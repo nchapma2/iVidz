@@ -18,3 +18,11 @@ export const logout = () => (
     url: 'api/session',
   })
 );
+
+export const checkUsername = (username) => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/session',
+    data: {user: {username}},
+  })
+);

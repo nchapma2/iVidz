@@ -15,11 +15,21 @@
   height: 50px;
   width: 100%;
 }
+.navbar > * {
+  padding: 10px;
+  position: absolute;
+}
 
 .logo {
   width: 50%;
 
   // margin: auto;
+}
+
+.home-link {
+  left: 45px;
+  margin-bottom: 10px;
+  padding-top:5px;
 }
 
 .search-input {
@@ -30,15 +40,7 @@
   margin-top: 5px;
 }
 
-.home-link {
-  left: 45px;
 
-}
-
-.navbar > * {
-  padding: 10px;
-  position: absolute;
-}
 
 .avatar-circle {
   width: 35px;

@@ -46,7 +46,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
 
     if(this.state.formPage === 1 && this.props.formType === 'login'){
-      return(
+      this.props.checkUsername(this.state.username).then(
         this.setState({
           email: this.state.email,
           username: this.state.username,

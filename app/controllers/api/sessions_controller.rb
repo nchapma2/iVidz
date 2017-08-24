@@ -1,12 +1,16 @@
 class Api::SessionsController < ApplicationController
 
+  def check
+    user = User.find_by(username: params[:user][:username])
+
+    if !user
+      render json: ['That username does not exist'], status: 422
+    else
+      render json: {username: user.username}
+    end
+  end
+
   def create
-    user = User.find_by_username(params[:user][:username])
-
-    # if !user
-    #   render json: ['That user does not exist'], status: 422
-    # end
-
     @user = User.find_by_credentials(params[:user][:username],
     params[:user][:password])
 
