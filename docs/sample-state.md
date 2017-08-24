@@ -9,7 +9,6 @@
   }
   currentVideo: {
     id: 3
-    }
   },
   videos: {
     3: {
