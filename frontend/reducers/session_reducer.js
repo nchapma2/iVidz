@@ -4,6 +4,7 @@ import { merge } from 'lodash';
 const nullState = {
   currentUser: null,
   errors: [],
+  page: 'user'
 };
 
 const SessionReducer = (state = nullState, action ) => {
@@ -13,9 +14,9 @@ const SessionReducer = (state = nullState, action ) => {
       const currentUser = action.currentUser;
       return merge({}, nullState, { currentUser });
     case RECEIVE_ERRORS:
-      return Object.assign({}, nullState, { errors: action.errors.responseJSON });
+      return Object.assign({}, state, { errors: action.errors.responseJSON });
     case RECEIVE_USER_SUCCESS:
-      return state;
+      return Object.assign({}, nullState, { page: 'password' } )
     default:
       return state;
   }

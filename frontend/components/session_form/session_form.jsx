@@ -8,7 +8,6 @@ class SessionForm extends React.Component {
       email: "",
       username: "",
       password: "",
-      formPage: 1
     };
     this.guestLogin = this.guestLogin.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,14 +16,6 @@ class SessionForm extends React.Component {
   componentWillReceiveProps(nextProps) {
     if(nextProps.loggedIn) {
       this.props.history.push('/');
-    }
-    if(nextProps.errors){
-      this.setState({
-        email: "",
-        username: "",
-        password: "",
-        formPage: 1
-      });
     }
   }
 
@@ -45,19 +36,13 @@ class SessionForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    if(this.state.formPage === 1 && this.props.formType === 'login'){
-      this.props.checkUsername(this.state.username).then(
-        this.setState({
-          email: this.state.email,
-          username: this.state.username,
-          password: this.state.password,
-          formPage: 2
-        })
-      );
+    if(this.props.page === 'user' && this.props.formType === 'login'){
+      this.props.checkUsername(this.state.username);
     } else {
       const user = Object.assign({}, this.state);
       this.props.processForm(user);
       }
+
   }
 
   navLink() {
@@ -140,7 +125,7 @@ class SessionForm extends React.Component {
   }
 
   renderForm() {
-    if(this.state.formPage === 1 && this.props.formType === 'login'){
+    if(this.props.page === 'user' && this.props.formType === 'login'){
       return(
         <div className='input-div'>
           <label className='field-label'>
@@ -155,7 +140,7 @@ class SessionForm extends React.Component {
           />
         </div>
       );
-    } else if(this.props.formType === 'login' && this.state.formPage === 2) {
+    } else if(this.props.formType === 'login' && this.props.page === 'password') {
       return(
         <div className='input-div'>
           <label className='field-label'>
@@ -178,11 +163,11 @@ class SessionForm extends React.Component {
       return(
         <input type='submit' value='Sign Up!' className='submit-button'/>
       );
-    } else if(this.state.formPage === 1){
+    } else if(this.props.page === 'user'){
       return(
         <input type='submit' value='NEXT' className='submit-button'/>
         );
-    } else if(this.state.formPage === 2) {
+    } else if(this.props.page === 'password') {
       return(
         <input type='submit' value='Log In!' className='submit-button'/>
         );
