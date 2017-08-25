@@ -1,9 +1,10 @@
 import { merge } from 'lodash';
-import { RECEIVE_ERRORS, RECEIVE_FILE } from '../actions/video_actions';
+import { RECEIVE_ERRORS, RECEIVE_FILE, RECEIVE_SINGLE_VIDEO } from '../actions/video_actions';
 
 const nullState = {
   page: 'upload',
-  errors: []
+  errors: [],
+  currentVideo: null
 };
 
 const uiReducer = ( state = nullState, action ) => {
@@ -13,6 +14,8 @@ const uiReducer = ( state = nullState, action ) => {
       return Object.assign({}, nullState, { page: 'details' });
     case RECEIVE_ERRORS:
       return Object.assign({}, state, { errors: action.errors.responseJSON });
+    case RECEIVE_SINGLE_VIDEO:
+      return Object.assign({}, state, { currentVideo: action.video });
     default:
       return state;
   }

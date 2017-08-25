@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import Dropzone from 'react-dropzone';
+import keys from 'lodash/keys';
 
 class UploadForm extends React.Component {
   constructor(props) {
@@ -12,21 +13,26 @@ class UploadForm extends React.Component {
       video: "",
     };
     this.handleFile = this.handleFile.bind(this);
+    this.publishVideo = this.publishVideo.bind(this);
   }
 
   publishVideo(e) {
     e.preventDefault();
-    
+    let formData = new FormData();
+    Object.keys(this.state).forEach((key) => {
+      formData.append(`video[${key}]`, this.state[key]);
+    });
+    this.props.createVideo(formData);
   }
 
   onDrop(file, error) {
-    debugger
     this.setState({
       title: "",
       description: "",
       category: "",
       video: file[0],
     });
+
     this.props.receiveFile();
   }
 

@@ -1,7 +1,9 @@
-export const createVideo = (video) => (
+export const createVideo = (formData) => (
   $.ajax({
     method: 'POST',
     url: 'api/videos',
-    data: {video}
+    data: formData,
+    processData: false,
+    contentType: false
   })
 );

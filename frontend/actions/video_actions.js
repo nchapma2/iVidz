@@ -11,6 +11,7 @@ export const receiveFile = () => ({
 
 export const receiveSingleVideo = (video) => ({
   type: RECEIVE_SINGLE_VIDEO,
+  video
 });
 
 export const createVideo = (video) => dispatch => (

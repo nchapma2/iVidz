@@ -26,15 +26,6 @@
 .upload-container-div {
   height: 100%;
   width: 100%;
-  // border: 1px solid lightgrey;
-  // box-shadow: 1px 2px 2px 1px lightgrey;
-  // border-radius: 1px 1px 1px 1px;
-  // padding: 10px;
-  // width: 400px;
-  // height: 500px;
-  // bottom: 30px;
-  // top: 100px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,6 +37,7 @@
 }
 
 .dropzone {
+  cursor: pointer;
   width: 75%;
   height: 25%;
   top: 50px;
