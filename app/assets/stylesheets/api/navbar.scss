@@ -87,15 +87,6 @@
 }
 
 
-
-.logout-button {
-  padding: 10px;
-  margin-left: 15px;
-  height: 50%;
-  width: 60%;
-  align-self: center;
-}
-
 a.navbar-link{
   text-decoration: none;
  background-color:#167ac6;
@@ -120,18 +111,46 @@ a.navbar-link{
 }
 
 .active {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: white;
   position: absolute;
-  min-width: 160px;
-  min-height: 200px;
+  min-width: 230px;
+  min-height: 150px;
   z-index: 1;
   margin: auto;
   right: -50px;
   top: 50px;
-  background-color: black;
-  border: 1px solid white;
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+.email-link {
+  padding-top: 10px;
+}
+
+.dropdown-button-container {
+  display: flex;
+  bottom: 0px;
+  height: 35%;
+  width: 100%;
+  position: absolute;
+  background-color: #f5f5f5;
+}
+
+.logout-button {
+  padding: 10px;
+  margin-left: 15px;
+  height: 50%;
+  width: 60%;
+  align-self: center;
+  font-weight: bold;
+}
+
+.add-account-button {
+  padding: 10px;
+  margin-left: 15px;
+  height: 50%;
+  width: 60%;
+  align-self: center;
+  font-weight: bold;
+  text-align: center;
+  line-height: normal;
 }

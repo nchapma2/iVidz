@@ -16,7 +16,7 @@
       title: 'Amazing Video!',
       description: 'Sample vid',
       uploader_id: 1,
-      video_url: '/dog_videos/video_4',
+      video: '/dog_videos/video_4',
       views: 1337,
       comments_ids: [1, 4, 5]
     }

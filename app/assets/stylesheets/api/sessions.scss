@@ -72,6 +72,9 @@
   font-size: 16px;
 }
 
+.login-field:focus {
+  border-bottom: 1px solid #4285f4;
+}
 .login-field:hover {
   border-bottom: 1px solid #4285f4;
 }

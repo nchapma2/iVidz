@@ -221,8 +221,8 @@ class SessionForm extends React.Component {
             {this.navLink()}
             {this.renderSubmit()}
           </div>
-        </form>
 
+        </form>
 
       </div>
     );
