@@ -11,13 +11,34 @@ class UploadForm extends React.Component {
       category: "",
       video: "",
     };
-  }
-  onDrop(hello, goodbye) {
-
+    this.handleFile = this.handleFile.bind(this);
   }
 
-  handleFile() {
+  publishVideo(e) {
+    e.preventDefault();
+    
+  }
+
+  onDrop(file, error) {
     debugger
+    this.setState({
+      title: "",
+      description: "",
+      category: "",
+      video: file[0],
+    });
+    this.props.receiveFile();
+  }
+
+  handleFile(e) {
+    e.preventDefault();
+    this.setState({
+      title: "",
+      description: "",
+      category: "",
+      video: e.currentTarget.files[0],
+    });
+    this.props.receiveFile();
   }
 
   update(property) {
@@ -30,8 +51,10 @@ class UploadForm extends React.Component {
     if(this.props.page === 'upload'){
       return(
     <div className='upload-container-div'>
-      <Dropzone className='dropzone' onDrop={this.onDrop}>
+      <Dropzone className='dropzone' onDrop={this.onDrop.bind(this)}>
         <img alt='upload' className='upload-form-icon' src={window.upload}></img>
+      </Dropzone>
+      <div className='upload-text'>
         <h4>Select files to upload</h4>
         <br/>
         <h5>Or drag and drop video files</h5>
@@ -40,12 +63,12 @@ class UploadForm extends React.Component {
           className='upload-input'
           onChange={this.handleFile}
           />
-      </Dropzone>
+      </div>
     </div>
   );} else if(this.props.page === 'details') {
     return(
       <div className='upload-form-div'>
-        <form>
+        <form className='upload-form' onSubmit={this.publishVideo}>
           <input
             type="text"
             placeholder="Title"
@@ -81,6 +104,7 @@ class UploadForm extends React.Component {
   }
 
   render() {
+
     return(
     <div className='upload-god'>
       {this.renderFileUpload()}

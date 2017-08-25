@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { receiveFile, createVideo } from '../../actions/session_actions';
+import { receiveFile, createVideo } from '../../actions/video_actions';
 
 import UploadForm from './upload_form';
 
@@ -10,7 +10,7 @@ const mapStateToProps = ({ ui }) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   createVideo: (video) => dispatch(createVideo(video)),
-  receiveFile: (videoFile) => dispatch(receiveFile(videoFile))
+  receiveFile: () => dispatch(receiveFile())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(UploadForm);

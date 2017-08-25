@@ -5,14 +5,12 @@ export const RECEIVE_SINGLE_VIDEO = 'RECEIVE_SINGLE_VIDEO';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_FILE = 'RECEIVE_FILE';
 
-export const receiveFile = (videoFile) => ({
+export const receiveFile = () => ({
   type: RECEIVE_FILE,
-  videoFile
 });
 
 export const receiveSingleVideo = (video) => ({
   type: RECEIVE_SINGLE_VIDEO,
-  video
 });
 
 export const createVideo = (video) => dispatch => (

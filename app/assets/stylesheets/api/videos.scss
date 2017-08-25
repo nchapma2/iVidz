@@ -3,13 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.upload-container-div {
+.upload-god {
   border: 1px solid lightgrey;
   box-shadow: 1px 2px 2px 1px lightgrey;
   border-radius: 1px 1px 1px 1px;
   padding: 10px;
-  width: 400px;
-  height: 500px;
+  width: 500px;
+  height: 350px;
   bottom: 30px;
   top: 100px;
 
@@ -23,7 +23,18 @@
   margin: auto;
 }
 
-.dropzone {
+.upload-container-div {
+  height: 100%;
+  width: 100%;
+  // border: 1px solid lightgrey;
+  // box-shadow: 1px 2px 2px 1px lightgrey;
+  // border-radius: 1px 1px 1px 1px;
+  // padding: 10px;
+  // width: 400px;
+  // height: 500px;
+  // bottom: 30px;
+  // top: 100px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +42,30 @@
   align-items: center;
   background-color: white;
   position: relative;
+
+}
+
+.dropzone {
+  width: 75%;
+  height: 25%;
+  top: 50px;
+  // position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  background-color: white;
   margin: auto;
+
+}
+
+.upload-text {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .upload-form-icon {
@@ -41,6 +75,7 @@
 }
 
 .upload-input {
+
   margin-left: 80px;
   padding-top: 25px;
   cursor: pointer;
