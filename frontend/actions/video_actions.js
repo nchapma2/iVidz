@@ -15,10 +15,6 @@ export const receiveSingleVideo = (video) => ({
   video
 });
 
-export const file = (videoFile) => ({
-
-});
-
 export const createVideo = (video) => dispatch => (
   VIDUtil.createVideo(video)
     .then((vid) => dispatch(receiveSingleVideo(vid)),

@@ -2,7 +2,7 @@ import { merge } from 'lodash';
 import { RECEIVE_ERRORS, RECEIVE_FILE } from '../actions/video_actions';
 
 const nullState = {
-  formPage: 'upload',
+  page: 'upload',
   errors: []
 };
 
@@ -17,3 +17,5 @@ const uiReducer = ( state = nullState, action ) => {
       return state;
   }
 };
+
+export default uiReducer;
