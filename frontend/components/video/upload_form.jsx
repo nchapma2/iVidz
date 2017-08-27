@@ -36,6 +36,7 @@ class UploadForm extends React.Component {
     this.props.receiveFile();
   }
 
+
   handleFile(e) {
     e.preventDefault();
     this.setState({
@@ -109,11 +110,28 @@ class UploadForm extends React.Component {
     }
   }
 
+  renderErrors() {
+    return (
+      <ul className='error-list-upload'>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
 
     return(
     <div className='upload-god'>
       {this.renderFileUpload()}
+      <br/>
+      {this.props.errors &&
+        this.renderErrors()
+      }
+      <br/>
     </div>
   );}
 }

@@ -67,8 +67,17 @@
 }
 
 .upload-input {
-
   margin-left: 80px;
   padding-top: 25px;
   cursor: pointer;
+}
+
+.error-list-upload {
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+
+.error-list-upload > * {
+  padding-bottom: 10px;
 }
