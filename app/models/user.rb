@@ -7,8 +7,11 @@ class User < ApplicationRecord
   primary_key: :id,
   foreign_key: :uploader_id,
   class_name: 'Video'
-
-  attr_reader :password
+  # 
+  # has_many :subscribers,
+  # primary_key: :id,
+  # foreign_key:
+  # attr_reader :password
 
   after_initialize :ensure_session_token
 

@@ -4,7 +4,7 @@ class Video < ApplicationRecord
     # styles: { thumb: {geometry: "400x400#", format: 'jpg'} }
   validates_attachment_content_type :video, content_type: /\Avideo\/.*\z/
 
-  belongs_to :user,
+  belongs_to :uploader,
   primary_key: :id,
   foreign_key: :uploader_id,
   class_name: 'User'

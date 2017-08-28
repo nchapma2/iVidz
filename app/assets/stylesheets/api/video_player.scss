@@ -1,0 +1,102 @@
+.video-player-div {
+  width: 640px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding-top: 90px;
+  padding-left: 50px;
+}
+
+.video-player {
+  height: 100%;
+  width: 100%;
+}
+
+.video-details-1 {
+  width: 640px;
+  height: 170px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0.5px 0px 0px lightgrey;
+}
+
+.subscriber-div {
+  height: 25px;
+
+}
+
+.subscribe-button {
+  border: none;
+  background: #e62117;
+  color: white;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background: #bf0316;
+}
+
+.video-details-1 h3 {
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
+.video-details-2 {
+  width: 640px;
+  height: 170px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0.5px 0px 0px lightgrey;
+}
+
+.user-details-div {
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.user-details {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.avatar-circle .video {
+  width: 35px;
+  height: 30px;
+  background-color: forestgreen;
+  text-align: center;
+  border-radius: 50%;
+  display: block;
+}
+
+.username-video {
+  text-decoration: none;
+  color: black;
+}
+
+.username-video:hover {
+  text-decoration: underline;
+}
+
+.initials .video {
+  right: 10px;
+}
+
+.subscriber-count {
+  border-bottom: 1px solid lightgrey;
+  border-top: 1px solid lightgrey;
+  border-right: 1px solid lightgrey;
+  background-color: #efefef;
+  color: grey;
+  padding-top: 5px;
+  padding-left: 4px;
+  width: 20px;
+  font-size: 12px;
+  text-align: center;
+}

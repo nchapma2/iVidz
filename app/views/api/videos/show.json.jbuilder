@@ -1,1 +1,1 @@
-json.extract! @video, :id, :title, :description, :uploader_id, :category, :views, :video
+json.extract! @video, :id, :title, :description, :uploader, :category, :views, :video
