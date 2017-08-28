@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 
+
 class VideoPlayer extends React.Component {
   constructor(props) {
     super(props);
@@ -53,7 +54,12 @@ class VideoPlayer extends React.Component {
           </div>
           <br/>
           <div className='video-details-2'>
-
+            <h4>Published at</h4>
+            <p>{this.props.currentVideo.description}</p>
+            <div className='category-div'>
+              <h5>Category:</h5>
+              <p>{this.props.currentVideo.category}</p>
+            </div>
           </div>
         </div>
     );

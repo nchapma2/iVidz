@@ -92,19 +92,19 @@ class UploadForm extends React.Component {
             onChange={this.update('description')}
             />
           <select onChange={this.update('category')} className='category-dropdown'>
-            <option value="auto">Auto & Vehicles</option>
-            <option value="fashion">Beauty & Fashion</option>
-            <option value="comedy">Comedy</option>
-            <option value="education">Education</option>
-            <option value="entertainment">Entertainment</option>
-            <option value="film">Film & Animation</option>
-            <option value="food">Food</option>
-            <option value="gaming">Gaming</option>
-            <option value="music">Music</option>
-            <option value="people">People & Blogs</option>
-            <option value="animals">Pets & Animals</option>
-            <option value="science">Science & Technology</option>
-            <option value="sports">Sports</option>
+            <option value="Auto & Vehicles">Auto & Vehicles</option>
+            <option value="Beauty & Fashion">Beauty & Fashion</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Education">Education</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Film & Animation">Film & Animation</option>
+            <option value="Food">Food</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Music">Music</option>
+            <option value="People & Blogs">People & Blogs</option>
+            <option value="Pets & Animals">Pets & Animals</option>
+            <option value="Science & Technology">Science & Technology</option>
+            <option value="Sports">Sports</option>
           </select>
           <input type='submit' value='PUBLISH' className='publish-input'/>
         </form>

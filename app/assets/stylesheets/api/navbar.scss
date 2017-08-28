@@ -38,8 +38,17 @@
   font-size: 14px;
   height: 25%;
   margin-top: 5px;
+  box-shadow: inset 0 0.5px 0 0 #DCDCDC;
 }
 
+.search-input:hover {
+  box-shadow: inset 0 0 0.5px 0 lightgrey;
+}
+
+.search-input:focus {
+  outline: none;
+
+}
 
 
 .avatar-circle {

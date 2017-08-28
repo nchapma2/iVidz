@@ -33,6 +33,7 @@
   background: #e62117;
   color: white;
   cursor: pointer;
+  border-radius: 2px;
 }
 
 .subscribe-button:hover {
@@ -45,11 +46,37 @@
 }
 
 .video-details-2 {
-  width: 640px;
+  width: 630px;
   height: 170px;
   background-color: white;
   border: 1px solid lightgrey;
   box-shadow: 0px 0.5px 0px 0px lightgrey;
+  display: block;
+  margin: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+
+}
+
+.video-details-2 h4 {
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.video-details-2 p {
+  font-size: 14px;
+}
+
+.category-div {
+  display: flex;
+  padding-top: 50px;
+}
+
+.category-div h5 {
+  font-weight: bold;
+}
+
+.category-div p {
+  padding-left: 25px;
 }
 
 .user-details-div {
@@ -78,6 +105,7 @@
 .username-video {
   text-decoration: none;
   color: black;
+  height: 25%;
 }
 
 .username-video:hover {
@@ -103,7 +131,10 @@
 
 .view-count {
   position: absolute;
-  padding-left: 490px;
+  display: flex;
+  left: 600px;
   padding-top: 35px;
   font-size: 20px;
+  width: 75px;
+  height: 50px;
 }

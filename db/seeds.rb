@@ -16,6 +16,6 @@ User.create!(username:'JacknJill', password:'password5', email:'JacknJill@myemai
 User.create!(username: 'guestAccount', password: 'hunter12', email: 'demo@gmail.com')
 
 
-Video.create!(title:'new video1', description:'new video1', uploader_id: new_user.id)
-Video.create!(title:'new video2', description:'new video2', uploader_id: new_user.id)
-Video.create!(title:'new video3', description:'new video3', uploader_id: new_user.id)
+Video.create!(title:'Flower Video', description:'Beautiful flowers flowing in the breeze', uploader_id: new_user.id, video: "https://s3.amazonaws.com/ividz-dev/videos/videos/000/000/033/original/flower.mp4")
+Video.create!(title:'Hot Coffee!', description:'It is being poured into a cup', uploader_id: new_user.id, video: "https://s3.amazonaws.com/ividz-dev/videos/videos/000/000/034/original/343647377.mp4")
+Video.create!(title:'Girls on Roller Coaster', description:'Two girls decide to go on a roller coaster', uploader_id: 'new_user.id, video: https://s3.amazonaws.com/ividz-dev/videos/videos/000/000/035/original/350950598.mp4')
