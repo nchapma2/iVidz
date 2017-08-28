@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import UploadFormContainer from './video/upload_form_container';
+import VideoPlayerContainer from './video/video_player_container';
 
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
     </header>
     <Route exact path='/' />
     <ProtectedRoute path='/upload' component={UploadFormContainer}/>
+    <Route path='/videos/:videoId' component={VideoPlayerContainer}/>
     <AuthRoute path='/login' component={SessionFormContainer}/>
     <AuthRoute path='/signup' component={SessionFormContainer}/>
   </div>

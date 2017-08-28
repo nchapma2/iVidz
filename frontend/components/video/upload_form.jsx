@@ -23,6 +23,9 @@ class UploadForm extends React.Component {
       formData.append(`video[${key}]`, this.state[key]);
     });
     this.props.createVideo(formData);
+    if(!!this.props.errors){
+      this.props.history.push('/');
+    }
   }
 
   onDrop(file, error) {

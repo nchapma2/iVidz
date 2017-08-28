@@ -19,3 +19,8 @@ export const createVideo = (video) => dispatch => (
     .then((vid) => dispatch(receiveSingleVideo(vid)),
     errors => dispatch(receiveErrors(errors)))
 );
+
+export const fetchSingleVideo = videoId => dispatch => (
+  VIDUtil.fetchSingleVideo(videoId)
+    .then((video) => dispatch(receiveSingleVideo(video)))
+);
