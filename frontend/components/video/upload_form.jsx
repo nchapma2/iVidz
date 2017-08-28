@@ -92,6 +92,7 @@ class UploadForm extends React.Component {
             onChange={this.update('description')}
             />
           <select onChange={this.update('category')} className='category-dropdown'>
+            <option selected disabled>Please select a category</option>
             <option value="Auto & Vehicles">Auto & Vehicles</option>
             <option value="Beauty & Fashion">Beauty & Fashion</option>
             <option value="Comedy">Comedy</option>

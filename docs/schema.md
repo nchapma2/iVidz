@@ -19,7 +19,7 @@ uploader_id | integer   | not null, foreign key (references users), indexed
 video       | string    | not null (added via paperclip)
 thumbnail   | string    | not null (added via paperclip)
 views       | integer   | not null
-category    | string    | 
+category    | string    |
 
 
 ## comments
@@ -29,6 +29,7 @@ id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
 body        | text      | not null
 video_id    | integer   | not null, foreign key (references videos)
+parent_id   | integer   | foreign key(references comment), indexed
 
 
 ## likes
