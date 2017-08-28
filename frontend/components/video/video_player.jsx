@@ -46,10 +46,10 @@ class VideoPlayer extends React.Component {
                     <button className='subscribe-button'>Subscribe</button>
                     <div className='subscriber-count'>10</div>
                   </div>
+                  <div className='view-count'>{this.props.currentVideo.views} views</div>
                 </div>
               }
             </div>
-
           </div>
           <br/>
           <div className='video-details-2'>
