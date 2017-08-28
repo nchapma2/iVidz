@@ -29,7 +29,7 @@ id          | integer   | not null, primary key
 author_id   | integer   | not null, foreign key (references users), indexed
 body        | text      | not null
 video_id    | integer   | not null, foreign key (references videos)
-parent_id   | integer   | foreign key(references comment), indexed
+parent_comment_id   | integer   | foreign key(references comment), indexed
 
 
 ## likes

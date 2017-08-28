@@ -43,12 +43,14 @@
         28: {
           id: 28,
           author_id: 1,
+          parent_comment_id: 3,
           body: 'Man, that cat can really flip!',
           video_id: 4
         },
         73: {
           id: 73,
           author_id: 2,
+          parent_comment_id: 10,
           body: "I'm so jealous!",
           video_id: 4
         }

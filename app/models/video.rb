@@ -8,6 +8,8 @@ class Video < ApplicationRecord
   foreign_key: :uploader_id,
   class_name: 'User'
 
+  has_many :comments
+
   # :styles =>
   #   { thumb: ['300x300#', 'jpg'] }
 end

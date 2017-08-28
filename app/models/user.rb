@@ -8,8 +8,13 @@ class User < ApplicationRecord
   foreign_key: :uploader_id,
   class_name: 'Video'
 
+  has_many :comments,
+  primary_key: :id,
+  foreign_key: :author_id,
+  class_name: 'User'
+
   attr_reader :password
-  
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(username, password)
