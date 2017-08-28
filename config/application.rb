@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module IVidz
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    Paperclip.options[:command_path] = "/usr/local/bin/identify"
     config.load_defaults 5.1
     config.paperclip_defaults = {
       :storage => :s3,
@@ -17,7 +18,7 @@ module IVidz
         :access_key_id => ENV["s3_access_key_id"],
         :secret_access_key => ENV["s3_secret_access_key_id"],
         :s3_region => ENV["s3_region"],
-        :s3_host_name => "s3-#{ENV["s3_region"]}.amazonaws.com",
+        :s3_host_name => "s3.amazonaws.com",
         :url => ":s3_host_name"
       }
     }

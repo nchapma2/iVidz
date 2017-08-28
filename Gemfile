@@ -65,3 +65,4 @@ gem 'jquery-rails'
 gem 'figaro'
 gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '>=2.0'
+gem 'paperclip-av-transcoder'

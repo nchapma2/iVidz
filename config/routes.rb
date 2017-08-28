@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     resources :videos, only: [:create, :show, :index, :edit]
   end
 
-  get 'api/session', :to => 'api/sessions#check'
+  get 'api/session', to: 'api/sessions#check'
 end
