@@ -7,3 +7,10 @@ export const createVideo = (formData) => (
     contentType: false
   })
 );
+
+export const fetchSingleVideo = (videoId) => (
+  $.ajax({
+    method: 'GET',
+    url: `api/videos/${videoId}`
+  })
+);
