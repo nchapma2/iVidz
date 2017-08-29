@@ -1,3 +1,10 @@
-// Place all the styles related to the api/comments controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.comment-form-container {
+  width: 620px;
+  background-color: white;
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  padding: 10px;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0.5px 0px 0px lightgrey;
+}

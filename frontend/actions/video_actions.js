@@ -16,7 +16,10 @@ export const receiveSingleVideo = (video) => ({
 
 export const createVideo = (video) => dispatch => (
   VIDUtil.createVideo(video)
-    .then((vid) => dispatch(receiveSingleVideo(vid)),
+    .then((vid) => {
+      dispatch(receiveSingleVideo(vid));
+      return vid;
+    },
     errors => dispatch(receiveErrors(errors)))
 );
 
