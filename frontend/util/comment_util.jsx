@@ -5,3 +5,13 @@ export const createComment = comment => (
     data: {comment}
   })
 );
+
+export const fetchComments = videoId => (
+  $.ajax({
+    method:'GET',
+    url: 'api/comments',
+    data: {
+      videoId
+    }
+  })
+);

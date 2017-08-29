@@ -57,7 +57,7 @@ class VideoPlayer extends React.Component {
             <h4>Published at</h4>
             <p>{this.props.currentVideo.description}</p>
             <div className='category-div'>
-              <h5>Category:</h5>
+              <h5>Category: {this.props.currentVideo.category}</h5>
               <p>{this.props.currentVideo.category}</p>
             </div>
           </div>
