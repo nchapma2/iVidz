@@ -35,8 +35,8 @@ class VideoPlayer extends React.Component {
             <h3 >{this.props.currentVideo.title}</h3>
 
             <div className='user-details-div'>
-              <div className='avatar-circle video'>
-                <span className='initials video'>{initial}</span>
+              <div className='avatar-square-video'>
+                <span className='initials-video'>{initial}</span>
               </div>
               {this.props.currentVideo.uploader &&
                 <div className='user-details'>
@@ -47,9 +47,9 @@ class VideoPlayer extends React.Component {
                     <button className='subscribe-button'>Subscribe</button>
                     <div className='subscriber-count'>10</div>
                   </div>
-                  <div className='view-count'>{this.props.currentVideo.views} views</div>
                 </div>
               }
+                <div className='view-count'>{this.props.currentVideo.views} views</div>
             </div>
           </div>
           <br/>

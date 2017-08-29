@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 class Navbar extends React.Component {
 
   constructor(props){
@@ -12,8 +13,6 @@ class Navbar extends React.Component {
   }
 
   toggleDropdown(e) {
-    // display none in CSS
-    // add onclick handler, have state for active class or not
     e.preventDefault();
     const setClass = !this.state.active;
     this.setState({ active: setClass });

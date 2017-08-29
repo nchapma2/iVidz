@@ -1,5 +1,6 @@
 .video-show-container {
   margin: auto;
+
 }
 
 .video-player-div {
@@ -7,7 +8,7 @@
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-top: 50px;
   padding-left: 50px;
 }
 
@@ -57,8 +58,8 @@
   box-shadow: 0px 0.5px 0px 0px lightgrey;
   display: block;
   margin: auto;
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 15px;
+  padding-top: 15px;
 
 }
 
@@ -97,13 +98,12 @@
   justify-content: space-between;
 }
 
-.avatar-circle .video {
+.avatar-square-video {
   width: 35px;
-  height: 30px;
-  background-color: forestgreen;
+  height: 35px;
+  background-color: darkgreen;
   text-align: center;
-  border-radius: 50%;
-  display: block;
+  right: 50px;
 }
 
 .username-video {
@@ -116,8 +116,13 @@
   text-decoration: underline;
 }
 
-.initials .video {
-  right: 10px;
+.initials-video {
+  align-self: center;
+  font-size: 25px;
+  color: white;
+  margin: auto;
+  font-weight: bold;
+  padding-top: 0px;
 }
 
 .subscriber-count {
@@ -134,11 +139,7 @@
 }
 
 .view-count {
-  position: absolute;
-  display: flex;
-  left: 600px;
-  padding-top: 35px;
-  font-size: 20px;
-  width: 75px;
-  height: 50px;
+  align-self: flex-end;
+  margin-left: 400px;
+  font-size: 16px;
 }
