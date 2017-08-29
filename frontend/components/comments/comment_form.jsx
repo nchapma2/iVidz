@@ -23,20 +23,16 @@ class CommentForm extends React.Component {
     });
   }
 
+
   render() {
-    let disabled;
-    if(!this.props.loggedIn){
-      disabled = 'disabled';
-    }
+
     return(
       <div className='comment-form-container'>
         <h5>COMMENTS &#9679; COUNT</h5>
         <div className='comment-form-div'>
-          {this.props.loggedIn &&
             <div className='avatar-square-comment'>
               <span className='initials-comment'>{this.props.currentUser.username.slice(0,1).toUpperCase()}</span>
             </div>
-          }
           <form className='comment-form' onSubmit={this.createComment}>
             <textarea className='comment-body-input'
               rows='2'
@@ -46,8 +42,7 @@ class CommentForm extends React.Component {
               ></textarea>
             <div className='comment-button-div'>
               <button className='comment-cancel' onClick={this.cancel}>Cancel</button>
-              <input
-                className='comment-submit' type='submit' value='Comment' />
+              <input className='comment-submit' type='submit' value='Comment' />
             </div>
           </form>
         </div>
