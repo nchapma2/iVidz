@@ -61,6 +61,20 @@
   align-self: flex-end;
 }
 
+.signup-button {
+  text-decoration: none;
+  background-color:#167ac6;
+  border: none;
+  border-radius:3px;
+  color:#fff;
+  margin-right:10px;
+  padding:10px 10px 10px 10px;
+  width: 30%;
+  height: 40px;
+  font-size: 16px;
+
+}
+
 .submit-login, .guest {
   float: right;
   text-decoration: none;
@@ -123,6 +137,7 @@
    padding: 20px;
    display: flex;
    justify-content: space-between;
+   margin-bottom: 10px;
  }
 
  .form-footer a {

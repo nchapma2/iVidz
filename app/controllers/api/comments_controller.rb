@@ -1,6 +1,7 @@
 class Api::CommentsController < ApplicationController
 
   def index
+
     video = Video.find(params[:videoId])
     @comments = video.comments
     render json: @comments
@@ -37,6 +38,6 @@ class Api::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:body, :parent_comment_id)
+    params.require(:comment).permit(:body, :parent_comment_id, :video_id)
   end
 end

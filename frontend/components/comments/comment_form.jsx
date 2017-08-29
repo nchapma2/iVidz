@@ -4,11 +4,12 @@ import { Link, withRouter } from 'react-router-dom';
 class CommentForm extends React.Component {
   constructor(props) {
     super(props);
-    this.createVideo = this.props.createComment.bind(this);
+
     this.state = {
       body: ""
     };
     this.cancel = this.cancel.bind(this);
+    this.makeComment = this.makeComment.bind(this);
   }
 
   cancel() {
@@ -23,17 +24,24 @@ class CommentForm extends React.Component {
     });
   }
 
+  makeComment(e) {
+    e.preventDefault();
+    const comment = Object.assign({}, this.state, { video_id: this.props.videoId});
+    this.props.createComment(comment);
+    this.setState({
+      body: ""
+    });
+  }
 
   render() {
-
     return(
       <div className='comment-form-container'>
-        <h5>COMMENTS &#9679; COUNT</h5>
+        <h5 className='comment-count'>COMMENTS &#9679; COUNT</h5>
         <div className='comment-form-div'>
             <div className='avatar-square-comment'>
               <img src={this.props.currentUser.avatar}></img>
             </div>
-          <form className='comment-form' onSubmit={this.createComment}>
+          <form className='comment-form' onSubmit={this.makeComment}>
             <textarea className='comment-body-input'
               rows='2'
               placeholder='Add a public comment...'

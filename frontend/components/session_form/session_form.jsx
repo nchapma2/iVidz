@@ -173,7 +173,7 @@ class SessionForm extends React.Component {
   renderSubmit() {
     if(this.props.formType === 'signup'){
       return(
-        <input type='submit' value='Sign Up!' className='submit-button'/>
+        <input type='submit' value='Sign Up!' className='signup-button'/>
       );
     } else if(this.props.page === 'user'){
       return(
@@ -205,10 +205,7 @@ class SessionForm extends React.Component {
           <button className='submit-button guest' onClick={this.guestLogin}>Demo Login</button>
         }
         {this.formHead()}
-        <br/>
-        <br/>
         <form onSubmit={this.handleSubmit} className='login-form'>
-          <br/>
           {this.renderSignup()}
           <br/>
           {this.renderForm()}

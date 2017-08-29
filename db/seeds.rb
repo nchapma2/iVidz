@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Video.destroy_all
+Comment.destroy_all
 
 new_user = User.create(username:'MickeyMouse', password:'password1', email:'MickeyMouse@myemail.com')
 User.create!(username:'DaffyDuck', password:'password2', email:'DaffyDuck@myemail.com')
@@ -16,6 +17,8 @@ User.create!(username:'JacknJill', password:'password5', email:'JacknJill@myemai
 User.create!(username: 'guestAccount', password: 'hunter12', email: 'demo@gmail.com')
 
 
-Video.create!(title:'Flower Video', category:"Entertainment",  description:'Beautiful flowers flowing in the breeze', uploader_id: new_user.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/flower.mp4")
+video = Video.create!(title:'Flower Video', category:"Entertainment",  description:'Beautiful flowers flowing in the breeze', uploader_id: new_user.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/flower.mp4")
 Video.create!(title:'Hot Coffee!', category: "Food", description:'It is being poured into a cup', uploader_id: new_user.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/343647377.mp4")
 Video.create!(title:'Roller Coasters Are Great!', category: "Entertainment", description:'Two girls decide to go on a roller coaster. Will they be afraid or excited?', uploader_id: new_user.id, video: 'https://s3.amazonaws.com/ividz-dev/seeds/350950598.mp4')
+
+Comment.create!(body: 'What a wonderful flower!', author_id: new_user.id, video_id: video.id)
