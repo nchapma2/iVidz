@@ -20,21 +20,12 @@
 
 
 .avatar-square-comment {
-  width: 35px;
-  height: 35px;
-  background-color: darkgreen;
+
+
+
   text-align: center;
 
   right: 50px;
-}
-
-
-.initials-comment {
-  align-self: center;
-  font-size: 25px;
-  color: white;
-  margin: auto;
-  font-weight: bold;
 }
 
 .comment-form {
@@ -50,6 +41,7 @@
   padding-left: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .comment-cancel {

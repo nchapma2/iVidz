@@ -2,6 +2,10 @@ class User < ApplicationRecord
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
+  
+
+  has_attached_file :avatar,
+    default_url: "blank-profile.png"
 
   has_many :videos,
   primary_key: :id,

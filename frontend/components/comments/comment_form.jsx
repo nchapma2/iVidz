@@ -31,7 +31,7 @@ class CommentForm extends React.Component {
         <h5>COMMENTS &#9679; COUNT</h5>
         <div className='comment-form-div'>
             <div className='avatar-square-comment'>
-              <span className='initials-comment'>{this.props.currentUser.username.slice(0,1).toUpperCase()}</span>
+              <img src={this.props.currentUser.avatar}></img>
             </div>
           <form className='comment-form' onSubmit={this.createComment}>
             <textarea className='comment-body-input'
