@@ -1,7 +1,9 @@
 class Api::CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all
+    video = Video.find(params[:videoId])
+    @comments = video.comments
+    render json: @comments
   end
 
   def show

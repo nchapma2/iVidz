@@ -15,16 +15,11 @@
   display: inline-flex;
   padding-bottom: 10px;
   border-bottom: .5px solid lightgrey;
-
 }
 
 
 .avatar-square-comment {
-
-
-
   text-align: center;
-
   right: 50px;
 }
 
@@ -35,6 +30,26 @@
 .comment-body-input {
   width: 250px;
   padding: 5px;
+  resize: none;
+  position: relative;
+}
+
+// .comment-body-input:after {
+// 	right: 100%;
+// 	top: 50%;
+// 	border: solid transparent;
+// 	content: " ";
+// 	height: 0;
+// 	width: 0;
+// 	position: absolute;
+// 	pointer-events: none;
+// 	border-color: #ffffff ;
+// 	border-width: 15px;
+// 	margin-top: -15px;
+// }
+
+.comment-body-input:focus {
+  outline: .5px solid blue;
 }
 
 .comment-button-div {

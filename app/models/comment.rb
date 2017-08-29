@@ -1,12 +1,12 @@
 class Comment < ApplicationRecord
 
-  validates :body, :author, :video, presence: true
+  validates :body, :author_id, :video, presence: true
 
   after_initialize :ensure_post_id!
 
   belongs_to :author,
   primary_key: :id,
-  foreign_key: :user_id,
+  foreign_key: :author_id,
   class_name: 'User'
 
   belongs_to :video
