@@ -19,7 +19,8 @@ module IVidz
         :secret_access_key => ENV["s3_secret_access_key_id"],
         :s3_region => ENV["s3_region"],
         :s3_host_name => "s3.amazonaws.com",
-        :url => ":s3_host_name"
+        :url => ":s3_host_name",
+        :s3_protocol => :https
       }
     }
     # Settings in config/environments/* take precedence over those specified here.
