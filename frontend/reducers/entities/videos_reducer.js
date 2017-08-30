@@ -7,6 +7,8 @@ const nullState = {
   videoList: [],
 };
 
+
+
 const VideosReducer = ( state = nullState, action ) => {
 
   Object.freeze(state);
@@ -14,12 +16,9 @@ const VideosReducer = ( state = nullState, action ) => {
     case RECEIVE_SINGLE_VIDEO:
       return Object.assign({}, state, { currentVideo: action.video });
     case RECEIVE_LIKE:
-      const like_ids = state.currentVideo.video.like_ids.push(action.like.id);
-      return Object.assign({}, state, { currentVideo: {
-        video: {
-          like_ids
-        }
-      }});
+      let newState = merge({}, state);
+      newState.currentVideo.video.like_ids.push(action.like.id);
+      return newState;
     default:
       return state;
   }

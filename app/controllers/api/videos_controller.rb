@@ -1,7 +1,7 @@
 class Api::VideosController < ApplicationController
 
   def index
-    # This will be changed when I figure out how to filter videos
+    
     @videos = Video.all
   end
 

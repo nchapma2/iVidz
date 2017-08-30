@@ -31,7 +31,6 @@ class VideoPlayer extends React.Component {
   render() {
 
     return(
-
         <div className='video-player-div'>
           {Object.keys(this.props.currentVideo).length !== 0 &&
             <video className='video-player' controls src={this.props.currentVideo.video.video}>
@@ -41,7 +40,7 @@ class VideoPlayer extends React.Component {
           <div className='video-details-1'>
           {Object.keys(this.props.currentVideo).length !== 0 &&
             <div className='detail-1-header'>
-              <h3>{this.props.currentVideo.video.title}</h3>
+              <div className='video-title'>{this.props.currentVideo.video.title}</div>
               <div className='like-div'>
                 <div className='like-count-video'>{this.props.currentVideo.video.like_ids.length}</div>
                 <img onClick={this.handleVideoLike}
@@ -58,7 +57,7 @@ class VideoPlayer extends React.Component {
               {Object.keys(this.props.currentVideo).length !== 0 &&
                 <div className='user-details'>
                     <Link className='username-video'
-                      to={`/users/${this.props.currentVideo.video.uploader.id}`}>{this.props.currentVideo.video.uploader.username}</Link>
+                      to={`/users/${this.props.currentVideo.video.uploader_id}`}>{this.props.currentVideo.video.uploader_username}</Link>
                   <br/>
                   <div className='subscriber-div'>
                     <button className='subscribe-button'>Subscribe</button>

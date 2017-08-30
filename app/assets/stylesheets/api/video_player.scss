@@ -1,5 +1,4 @@
 .video-show-container {
-  margin: auto;
   margin-top: 10px;
   margin-left: 100px;
 }
@@ -8,7 +7,7 @@
   width: 640px;
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 40px;
   padding-left: 50px;
 }
 
@@ -39,7 +38,7 @@
   align-items: center;
   justify-content: space-between;
   width: 50px;
-  margin-right: 10px;
+  margin-right: 25px;
 }
 
 .like-count-video {
@@ -70,9 +69,10 @@
   background: #bf0316;
 }
 
-.video-details-1 h3 {
+.video-title {
   padding-left: 15px;
   padding-top: 15px;
+  font-size: 25px;
 }
 
 .video-details-2 {
@@ -124,9 +124,8 @@
 }
 
 .avatar-square-video {
-  width: 35px;
-  height: 35px;
-
+  width: 50px;
+  height: 50px;
   text-align: center;
   right: 50px;
 }

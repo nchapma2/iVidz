@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 class CommentIndexItem extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleCommentLike = this.handleCommentLike.bind(this);
+  }
+
+  handleCommentLike(e) {
+    e.preventDefault();
+    this.props.createLike({
+      likeable_type: 'Comment',
+      likeable_id: this.props.comment.id
+    });
   }
 
   render() {
@@ -21,7 +31,8 @@ class CommentIndexItem extends React.Component {
           </div>
           <div className='comment-body'>{this.props.comment.body}</div>
           <div className='comment-footer'>
-            <img
+              <div className='like-count-comment'>{this.props.comment.like_ids.length}</div>
+            <img onClick={this.handleCommentLike}
               className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
           </div>
         </div>
