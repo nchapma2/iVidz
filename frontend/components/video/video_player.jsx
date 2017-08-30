@@ -21,11 +21,6 @@ class VideoPlayer extends React.Component {
 
   render() {
 
-    let initial;
-    if(this.props.currentVideo.uploader){
-      initial = this.props.currentVideo.uploader.username.slice(0,1).toUpperCase();
-    }
-
     return(
 
         <div className='video-player-div'>
@@ -41,7 +36,7 @@ class VideoPlayer extends React.Component {
               <div className='like-div'>
                 <div className='like-count-video'>{this.props.currentVideo.video.likes}</div>
                 <img onClick={this.handleLike}
-                  className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/seeds/thumbs-up-512.jpg" />
+                  className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
               </div>
             </div>
             }

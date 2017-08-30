@@ -22,7 +22,7 @@ class CommentIndexItem extends React.Component {
           <div className='comment-body'>{this.props.comment.body}</div>
           <div className='comment-footer'>
             <img
-              className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/seeds/thumbs-up-512.jpg" />
+              className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
           </div>
         </div>
       </li>
