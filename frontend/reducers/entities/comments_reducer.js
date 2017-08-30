@@ -2,6 +2,7 @@ import {
   RECEIVE_SINGLE_COMMENT,
   RECEIVE_COMMENTS
 } from '../../actions/comment_actions';
+import { RECEIVE_SINGLE_VIDEO } from '../../actions/video_actions';
 
 import { merge } from 'lodash';
 
@@ -15,6 +16,8 @@ const CommentsReducer = ( state = nullState, action ) => {
       return Object.assign({}, nullState, action.comments );
     case RECEIVE_SINGLE_COMMENT:
       return Object.assign( {}, state, { [action.comment.id]: action.comment });
+    // case RECEIVE_SINGLE_VIDEO:
+    //   return nullState;
     default:
       return state;
   }

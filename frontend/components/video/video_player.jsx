@@ -25,8 +25,8 @@ class VideoPlayer extends React.Component {
     if(this.props.currentVideo.uploader){
       initial = this.props.currentVideo.uploader.username.slice(0,1).toUpperCase();
     }
-
     return(
+
         <div className='video-player-div'>
           <video className='video-player' controls src={this.props.currentVideo.video}>
           </video>
@@ -36,7 +36,7 @@ class VideoPlayer extends React.Component {
 
             <div className='user-details-div'>
               <div className='avatar-square-video'>
-                <span className='initials-video'>{initial}</span>
+                <img className='uploader-avatar' src={this.props.currentVideo.uploader_avatar} />
               </div>
               {this.props.currentVideo.uploader &&
                 <div className='user-details'>

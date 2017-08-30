@@ -4,10 +4,12 @@ import { fetchComments } from '../../actions/comment_actions';
 import { connect } from 'react-redux';
 import { allComments } from '../../reducers/selectors';
 
-const mapStateToProps = ({ entities }, ownProps) => ({
-  comments: allComments(entities.comments),
-  videoId: ownProps.videoId
-});
+const mapStateToProps = ({ entities }, ownProps) => {
+  return({
+    comments: allComments(entities.comments),
+    videoId: ownProps.videoId
+  });
+};
 
 const mapDispatchToProps = dispatch => ({
   fetchComments: videoId => dispatch(fetchComments(videoId))

@@ -3,9 +3,11 @@ class User < ApplicationRecord
   validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
-
   has_attached_file :avatar,
     default_url: "https://s3.amazonaws.com/ividz-dev/seeds/blank-profile.png"
+
+  validates_attachment :avatar,
+    content_type: { content_type: ["image/jpeg", "image/gif", "image/png"] }
 
   has_many :videos,
   primary_key: :id,
