@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20170830133333) do
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "video_id", null: false
+    t.string "likeable_type"
+    t.bigint "likeable_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "video_id"], name: "index_likes_on_user_id_and_video_id", unique: true
+    t.index ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
   end
 
   create_table "users", force: :cascade do |t|

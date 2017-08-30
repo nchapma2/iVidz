@@ -18,6 +18,9 @@ class VideoPlayer extends React.Component {
     }
   }
 
+  handleLike() {
+    
+  }
 
   render() {
 
