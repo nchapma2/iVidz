@@ -6,6 +6,8 @@ import { Link, withRouter } from 'react-router-dom';
 class VideoPlayer extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleVideoLike = this.handleVideoLike.bind(this);
   }
 
   componentDidMount() {
@@ -18,8 +20,12 @@ class VideoPlayer extends React.Component {
     }
   }
 
-  handleLike() {
-    
+  handleVideoLike(e) {
+    e.preventDefault();
+    this.props.createLike({
+      likeable_type: 'Video',
+      likeable_id: this.props.videoId
+    });
   }
 
   render() {
@@ -37,8 +43,8 @@ class VideoPlayer extends React.Component {
             <div className='detail-1-header'>
               <h3>{this.props.currentVideo.video.title}</h3>
               <div className='like-div'>
-                <div className='like-count-video'>{this.props.currentVideo.video.likes}</div>
-                <img onClick={this.handleLike}
+                <div className='like-count-video'>{this.props.currentVideo.video.like_ids.length}</div>
+                <img onClick={this.handleVideoLike}
                   className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
               </div>
             </div>

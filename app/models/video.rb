@@ -13,8 +13,6 @@ class Video < ApplicationRecord
 
   has_many :comments
 
-  has_many :likers,
-  through: :likes,
-  source: :user
+  has_many :likes, as: :likeable
 
 end

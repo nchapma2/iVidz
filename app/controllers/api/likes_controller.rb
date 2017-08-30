@@ -1,9 +1,8 @@
-class LikesController < ApplicationController
+class Api::LikesController < ApplicationController
 
   def create
-    video = Video.find(params[:videoId])
-    @like = Like.new
-    @like.video_id = video.id
+
+    @like = Like.new(like_params)
     @like.user_id = current_user.id
 
     if @like.save
@@ -20,5 +19,10 @@ class LikesController < ApplicationController
     render json: @likes
   end
 
+  private
+
+  def like_params
+    params.require(:like).permit(:likeable_id, :likeable_type)
+  end
 
 end

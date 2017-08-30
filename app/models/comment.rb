@@ -22,6 +22,8 @@ class Comment < ApplicationRecord
   primary_key: :id,
   optional: true
 
+  has_many :likes, as: :likeable
+
   def posted_date
     time_ago_in_words(self.created_at)
   end

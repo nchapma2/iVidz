@@ -23,10 +23,6 @@ class User < ApplicationRecord
 
   has_many :likes
 
-  has_many :liked_videos,
-  through: :likes,
-  source: :video
-
   attr_reader :password
 
   after_initialize :ensure_session_token
