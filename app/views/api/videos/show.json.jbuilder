@@ -6,6 +6,7 @@ json.video do
   json.uploader_username @video.uploader.username
   json.comment_ids @video.comment_ids
   json.like_ids @video.like_ids
+  json.likes @video.likes
 end
 
 json.comments do

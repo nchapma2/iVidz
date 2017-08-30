@@ -1,7 +1,6 @@
 class Api::LikesController < ApplicationController
 
   def create
-
     @like = Like.new(like_params)
     @like.user_id = current_user.id
 
@@ -17,6 +16,12 @@ class Api::LikesController < ApplicationController
     video = Video.find(params[:videoId])
     @likes = video.likes
     render json: @likes
+  end
+
+  def destroy
+    like = Like.find(params[:id])
+    like.destroy
+    render json: like
   end
 
   private

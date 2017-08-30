@@ -8,6 +8,8 @@ class VideoPlayer extends React.Component {
     super(props);
 
     this.handleVideoLike = this.handleVideoLike.bind(this);
+    this.renderLike = this.renderLike.bind(this);
+    this.handleVideoLikeDelete = this.handleVideoLikeDelete.bind(this);
   }
 
   componentDidMount() {
@@ -28,6 +30,42 @@ class VideoPlayer extends React.Component {
     });
   }
 
+  handleVideoLikeDelete(e) {
+    e.preventDefault();
+    let likeId;
+    this.props.currentVideo.video.likes.forEach(like => {
+      if(this.props.currentUser.id === like.user_id){
+        likeId = like.id;
+      }
+    });
+    this.props.destroyLike(likeId);
+  }
+
+  renderLike() {
+
+    let liker_ids = this.props.currentVideo.video.likes.map(like => {
+      return like.user_id;
+    });
+
+      if(liker_ids.includes(this.props.currentUser.id)){
+        return(
+          <div className='like-div'>
+            <div className='like-count-video'>{this.props.currentVideo.video.like_ids.length}</div>
+            <img onClick={this.handleVideoLikeDelete}
+              className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
+          </div>
+        );
+      } else {
+        return(
+          <div className='like-div'>
+            <div className='like-count-video-unliked'>{this.props.currentVideo.video.like_ids.length}</div>
+            <img onClick={this.handleVideoLike}
+              className='like-symbol-video-unliked' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
+          </div>
+        );
+      }
+  }
+
   render() {
 
     return(
@@ -41,11 +79,7 @@ class VideoPlayer extends React.Component {
           {Object.keys(this.props.currentVideo).length !== 0 &&
             <div className='detail-1-header'>
               <div className='video-title'>{this.props.currentVideo.video.title}</div>
-              <div className='like-div'>
-                <div className='like-count-video'>{this.props.currentVideo.video.like_ids.length}</div>
-                <img onClick={this.handleVideoLike}
-                  className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
-              </div>
+              {this.renderLike()}
             </div>
             }
             <div className='user-details-div'>
