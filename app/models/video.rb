@@ -4,6 +4,8 @@ class Video < ApplicationRecord
     styles: { thumb: ['400x400#', :jpeg] }
   validates_attachment_content_type :video, content_type: /\Avideo\/.*\z/
 
+  has_many :likes
+
   belongs_to :uploader,
   primary_key: :id,
   foreign_key: :uploader_id,
@@ -11,6 +13,4 @@ class Video < ApplicationRecord
 
   has_many :comments
 
-  # :styles =>
-  #   { thumb: ['300x300#', 'jpg'] }
 end
