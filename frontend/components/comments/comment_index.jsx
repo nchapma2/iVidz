@@ -3,6 +3,7 @@ import CommentIndexItem from './comment_index_item';
 import { fetchComments } from '../../actions/comment_actions';
 import { connect } from 'react-redux';
 import { allComments } from '../../reducers/selectors';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = ({ entities }, ownProps) => {
   return({
@@ -20,11 +21,6 @@ class CommentIndex extends React.Component {
   constructor(props) {
     super(props);
   }
-
-  componentDidMount() {
-    this.props.fetchComments(this.props.videoId);
-  }
-
 
   render () {
     let comments;
@@ -45,4 +41,4 @@ class CommentIndex extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CommentIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CommentIndex));

@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-
+  include ActionView::Helpers::DateHelper
   validates :body, :author_id, :video, presence: true
 
   after_initialize :ensure_post_id!
@@ -21,6 +21,10 @@ class Comment < ApplicationRecord
   foreign_key: :parent_comment_id,
   primary_key: :id,
   optional: true
+
+  def posted_date
+    time_ago_in_words(self.created_at)
+  end
 
   private
 

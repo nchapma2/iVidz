@@ -1,11 +1,11 @@
 .video-show-container {
   margin: auto;
+  margin-top: 10px;
   margin-left: 100px;
 }
 
 .video-player-div {
   width: 640px;
-  cursor: pointer;
   display: flex;
   flex-direction: column;
   padding-top: 50px;
@@ -15,6 +15,7 @@
 .video-player {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .video-details-1 {
@@ -28,9 +29,33 @@
   box-shadow: 0px 0.5px 0px 0px lightgrey;
 }
 
+.detail-1-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.like-count-video {
+  align-self: flex-end;
+  color: grey;
+}
+
+.like-symbol-video {
+  height: 30px;
+  width: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
 .subscriber-div {
   height: 25px;
-
 }
 
 .subscribe-button {

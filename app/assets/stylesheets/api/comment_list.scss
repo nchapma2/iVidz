@@ -16,7 +16,6 @@
   border-top: .5px solid lightgrey;
   border-bottom: .5px solid lightgrey;
   padding: 5px;
-  height: 60px;
 }
 
 .comment-avatar {
@@ -41,12 +40,29 @@
 }
 
 .comment-body {
-  font-size: 14px;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 .user-link {
-  height: 12px;
+  height: 10px;
   align-self: flex-end;
+  color: black;
+  text-decoration: none;
+  margin-top: 3px;
+  margin-bottom: 5px
+}
+
+.timestamp-comment {
+  margin-top: 3px;
+  padding-left: 5px;
+  color: grey;
+  align-self: center;
+  font-size: 12px;
+}
+
+.user-link:hover {
+  text-decoration: underline;
 }
 
 .comment-footer {
@@ -57,4 +73,9 @@
 
 .comment-footer h5 {
   padding-left: 3px;
+  align-self: center;
+}
+
+.like-symbol {
+  margin-left: 5px;
 }

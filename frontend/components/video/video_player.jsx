@@ -25,23 +25,36 @@ class VideoPlayer extends React.Component {
     if(this.props.currentVideo.uploader){
       initial = this.props.currentVideo.uploader.username.slice(0,1).toUpperCase();
     }
+
     return(
 
         <div className='video-player-div'>
-          <video className='video-player' controls src={this.props.currentVideo.video}>
-          </video>
+          {Object.keys(this.props.currentVideo).length !== 0 &&
+            <video className='video-player' controls src={this.props.currentVideo.video.video}>
+            </video>
+          }
           <br />
           <div className='video-details-1'>
-            <h3 >{this.props.currentVideo.title}</h3>
-
+          {Object.keys(this.props.currentVideo).length !== 0 &&
+            <div className='detail-1-header'>
+              <h3>{this.props.currentVideo.video.title}</h3>
+              <div className='like-div'>
+                <div className='like-count-video'>{this.props.currentVideo.video.likes}</div>
+                <img onClick={this.handleLike}
+                  className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/seeds/thumbs-up-512.jpg" />
+              </div>
+            </div>
+            }
             <div className='user-details-div'>
               <div className='avatar-square-video'>
-                <img className='uploader-avatar' src={this.props.currentVideo.uploader_avatar} />
+                {Object.keys(this.props.currentVideo).length !== 0 &&
+                  <img className='uploader-avatar' src={this.props.currentVideo.video.uploader_avatar} />
+                }
               </div>
-              {this.props.currentVideo.uploader &&
+              {Object.keys(this.props.currentVideo).length !== 0 &&
                 <div className='user-details'>
                     <Link className='username-video'
-                      to={`/users/${this.props.currentVideo.uploader.id}`}>{this.props.currentVideo.uploader.username}</Link>
+                      to={`/users/${this.props.currentVideo.video.uploader.id}`}>{this.props.currentVideo.video.uploader.username}</Link>
                   <br/>
                   <div className='subscriber-div'>
                     <button className='subscribe-button'>Subscribe</button>
@@ -49,18 +62,22 @@ class VideoPlayer extends React.Component {
                   </div>
                 </div>
               }
-                <div className='view-count'>{this.props.currentVideo.views} views</div>
+              {Object.keys(this.props.currentVideo).length !== 0 &&
+                <div className='view-count'>{this.props.currentVideo.video.views} views</div>
+                }
             </div>
           </div>
           <br/>
-          <div className='video-details-2'>
-            <h4>Published at</h4>
-            <p>{this.props.currentVideo.description}</p>
-            <div className='category-div'>
-              <h5>Category:</h5>
-              <p>{this.props.currentVideo.category}</p>
+          {Object.keys(this.props.currentVideo).length !== 0 &&
+            <div className='video-details-2'>
+              <h4>Published at</h4>
+              <p>{this.props.currentVideo.video.description}</p>
+              <div className='category-div'>
+                <h5>Category:</h5>
+                <p>{this.props.currentVideo.video.category}</p>
+              </div>
             </div>
-          </div>
+          }
         </div>
     );
   }

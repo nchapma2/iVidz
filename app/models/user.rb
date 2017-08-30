@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include ActionView::Helpers::DateHelper
+
   validates :username, :email, :password_digest, :session_token, presence: true
   validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
@@ -19,9 +21,19 @@ class User < ApplicationRecord
   foreign_key: :author_id,
   class_name: 'User'
 
+  has_many :likes
+
+  has_many :liked_videos,
+  through: :likes,
+  source: :video
+
   attr_reader :password
 
   after_initialize :ensure_session_token
+
+  def posted_date
+    time_ago_in_words(self.created_at)
+  end
 
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)

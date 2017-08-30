@@ -6,10 +6,6 @@ class CommentIndexItem extends React.Component {
     super(props);
   }
 
-  handleLike() {
-    
-  }
-
   render() {
     return(
       <li className='comment-item'>
@@ -19,14 +15,13 @@ class CommentIndexItem extends React.Component {
           <div className='comment-header'>
             <Link className='user-link'
               to={`/api/users/${this.props.comment.author_id}`}>
-              {this.props.comment.author_username}
+              {this.props.comment.author}
             </Link>
-            <p>Timestamp</p>
+            <div className='timestamp-comment'>{this.props.comment.posted}</div>
           </div>
-          <p className='comment-body'>{this.props.comment.body}</p>
+          <div className='comment-body'>{this.props.comment.body}</div>
           <div className='comment-footer'>
-            <h5>Likes</h5>
-            <img onClick={this.handleLike}
+            <img
               className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/seeds/thumbs-up-512.jpg" />
           </div>
         </div>

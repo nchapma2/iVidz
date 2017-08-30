@@ -8,6 +8,7 @@ const nullState = {
 
 const VideosReducer = ( state = nullState, action ) => {
   Object.freeze(state);
+
   switch(action.type) {
     case RECEIVE_SINGLE_VIDEO:
       return Object.assign({}, state, { currentVideo: action.video });

@@ -42,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .comment-cancel {
@@ -51,7 +52,7 @@
   height: 30px;
   width: 65px;
   padding: 10px;
-
+  cursor: pointer;
 }
 
 .comment-submit {
@@ -64,6 +65,7 @@
   padding:10px 10px 10px 10px;
   border: none;
   height: 30px;
+  cursor: pointer;
 }
 
 .comment-count {

@@ -10,14 +10,13 @@ const nullState = {
 };
 
 const CommentsReducer = ( state = nullState, action ) => {
+
   Object.freeze(state);
   switch(action.type) {
-    case RECEIVE_COMMENTS:
-      return Object.assign({}, nullState, action.comments );
+    case RECEIVE_SINGLE_VIDEO:
+      return action.video.comments;
     case RECEIVE_SINGLE_COMMENT:
       return Object.assign( {}, state, { [action.comment.id]: action.comment });
-    // case RECEIVE_SINGLE_VIDEO:
-    //   return nullState;
     default:
       return state;
   }
