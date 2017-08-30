@@ -8,18 +8,19 @@ class CommentIndexItem extends React.Component {
 
 
   render() {
-
     return(
       <li className='comment-item'>
-        <img src={this.props.comment.author_avatar}></img>
+        <img className='comment-avatar'
+          src={this.props.comment.author_avatar}></img>
         <div className='comment-div'>
           <div className='comment-header'>
-            <Link to={`/api/users/${this.props.comment.author_id}`}>
+            <Link className='user-link'
+              to={`/api/users/${this.props.comment.author_id}`}>
               {this.props.comment.author_username}
             </Link>
             <p>Timestamp</p>
           </div>
-          <p>{this.props.comment.body}</p>
+          <p className='comment-body'>{this.props.comment.body}</p>
           <div className='comment-footer'>
             <h5>Likes</h5>
             <h5>Like symbol</h5>

@@ -9,3 +9,52 @@
   border-top: none;
   box-shadow: 0px 0.5px 0px 0px lightgrey;
 }
+
+.comment-item {
+  display: flex;
+  align-items: center;
+  border-top: .5px solid lightgrey;
+  border-bottom: .5px solid lightgrey;
+  padding: 5px;
+  height: 60px;
+}
+
+.comment-avatar {
+  height: 75%;
+  width: 45px;
+
+}
+
+.comment-div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 10px;
+}
+
+.comment-header {
+  display: flex;
+}
+
+.comment-header p {
+  font-size: 12px;
+}
+
+.comment-body {
+  font-size: 14px;
+}
+
+.user-link {
+  height: 12px;
+  align-self: flex-end;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.comment-footer h5 {
+  padding-left: 3px;
+}
