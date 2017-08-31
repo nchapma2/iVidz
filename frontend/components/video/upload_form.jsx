@@ -76,6 +76,7 @@ class UploadForm extends React.Component {
   );} else if(this.props.page === 'details') {
     return(
       <div className='upload-form-div'>
+        <div className='upload-form-header'>Almost there...</div>
         <form className='upload-form' onSubmit={this.publishVideo}>
           <input
             type="text"
@@ -83,7 +84,8 @@ class UploadForm extends React.Component {
             value={this.state.title}
             onChange={this.update('title')}
             />
-          <input
+          <textarea className='video-upload-description'
+            rows='3'
             type="text"
             placeholder="Description"
             value={this.state.description}

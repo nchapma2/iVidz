@@ -21,9 +21,7 @@
 }
 
 .logo {
-  width: 50%;
-
-  // margin: auto;
+  width: 45%;
 }
 
 .home-link {
@@ -38,7 +36,6 @@
   font-size: 14px;
   height: 25%;
   margin-top: 5px;
-  box-shadow: inset 0 0.5px 0 0 #DCDCDC;
 }
 
 .search-input:hover {
@@ -47,7 +44,6 @@
 
 .search-input:focus {
   outline: none;
-
 }
 
 
@@ -119,18 +115,45 @@ a.navbar-link{
   display: none;
 }
 
+
 .active {
-  position: absolute;
+	position: absolute;
   box-shadow: 1px 2px 2px 1px lightgrey;
   min-width: 230px;
   min-height: 150px;
   z-index: 1;
   margin: auto;
+  margin-top: 20px;
+  margin-right: 30px;
   right: -50px;
   top: 50px;
   background-color: white;
   border: 1px solid lightgrey;
 }
+.active:after, .active:before {
+	bottom: 100%;
+	left: 80%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.active:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 20px;
+	margin-left: -20px;
+}
+.active:before {
+	border-color: rgba(211, 211, 211, 0);
+	border-bottom-color: #d3d3d3;
+	border-width: 21px;
+	margin-left: -21px;
+}
+
 
 .email-link {
   padding-top: 10px;
@@ -149,19 +172,21 @@ a.navbar-link{
 .logout-button {
   padding: 10px;
   margin-left: 15px;
+  margin-right: 5px;
   height: 50%;
   width: 60%;
   align-self: center;
   font-weight: bold;
+  line-height: 5px;
 }
 
 .add-account-button {
   padding: 10px;
-  margin-left: 15px;
+  margin-left: 5px;
   height: 50%;
   width: 60%;
   align-self: center;
   font-weight: bold;
   text-align: center;
-  line-height: normal;
+  line-height: 5px;
 }

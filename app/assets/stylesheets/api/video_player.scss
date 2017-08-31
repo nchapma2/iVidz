@@ -77,6 +77,8 @@
   color: white;
   cursor: pointer;
   border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 .subscribe-button:hover {
