@@ -5,10 +5,15 @@ class Api::SubscriptionsController < ApplicationController
     @subscription.subscriber_id = current_user.id
 
     if @subscription.save
-      render json: @subscription
+      render :show
     else
       render json: @subscription.errors.full_messages, status: 422
     end
+  end
+
+  def show
+    @subscription = Subscription.find(params[:id])
+    render :show
   end
 
   def index
@@ -16,9 +21,9 @@ class Api::SubscriptionsController < ApplicationController
   end
 
   def destroy
-    sub = Subscription.find(params[:id])
-    sub.destroy
-    render json: sub
+    @subscription = Subscription.find(params[:id])
+    @subscription.destroy
+    render :show
   end
 
   private

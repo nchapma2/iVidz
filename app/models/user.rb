@@ -35,11 +35,11 @@ class User < ApplicationRecord
 
   has_many :subscribed_users,
   through: :user_subscriptions,
-  source: :subscribed_user
+  source: :subscriber
 
   has_many :subscribed_channels,
   through: :subscriptions,
-  source: :subscriber
+  source: :subscribed_user
 
 
   attr_reader :password
