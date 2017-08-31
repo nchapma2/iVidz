@@ -13,12 +13,14 @@ class VideoPlayer extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSingleVideo(this.props.videoId);
+    this.props.fetchSingleVideo(this.props.videoId)
+      .then(() => this.props.fetchComments(this.props.videoId));
   }
 
   componentWillReceiveProps(nextProps){
     if(this.props.videoId !== nextProps.match.params.videoId){
-      this.props.fetchSingleVideo(nextProps.match.params.videoId);
+      this.props.fetchSingleVideo(nextProps.match.params.videoId)
+        .then(() => this.props.fetchComments(this.props.videoId));
     }
   }
 
@@ -107,7 +109,7 @@ class VideoPlayer extends React.Component {
           <br/>
           {Object.keys(this.props.currentVideo).length !== 0 &&
             <div className='video-details-2'>
-              <h4>Published at</h4>
+              <h4>Published {this.props.currentVideo.video.posted} ago</h4>
               <p>{this.props.currentVideo.video.description}</p>
               <div className='category-div'>
                 <h5>Category:</h5>

@@ -1,4 +1,6 @@
 class Video < ApplicationRecord
+  include ActionView::Helpers::DateHelper
+
   validates :title, :description, presence: true
   has_attached_file :video,
     styles: { thumb: ['400x400#', :jpeg] }
@@ -14,5 +16,9 @@ class Video < ApplicationRecord
   has_many :comments
 
   has_many :likes, as: :likeable
+
+  def posted_date
+    time_ago_in_words(self.created_at)
+  end
 
 end

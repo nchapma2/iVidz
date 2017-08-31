@@ -79,9 +79,11 @@
   font-size: 14px;
 }
 
-.comment-footer h5 {
-  padding-left: 3px;
-  align-self: center;
+.like-count-comment-unliked {
+  align-self: flex-end;
+  color: grey;
+  padding-right: 3px;
+  font-size: 14px;
 }
 
 .like-symbol {
@@ -89,4 +91,18 @@
   height: 20px;
   width: 20px;
   cursor: pointer;
+  filter: brightness(0);
+}
+
+.like-symbol-unliked{
+  margin-left: 5px;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+  filter: invert(70);
+}
+
+.comment-footer h5 {
+  padding-left: 3px;
+  align-self: center;
 }

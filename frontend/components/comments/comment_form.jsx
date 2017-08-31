@@ -36,7 +36,7 @@ class CommentForm extends React.Component {
   render() {
     return(
       <div className='comment-form-container'>
-        <h5 className='comment-count'>COMMENTS &#9679; COUNT</h5>
+        <h5 className='comment-count'>Comments &#9679; {this.props.commentCount}</h5>
         <div className='comment-form-div'>
             <div className='avatar-square-comment'>
               <img src={this.props.currentUser.avatar}></img>

@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import VideoPlayer from './video_player';
 import { fetchSingleVideo } from '../../actions/video_actions';
+import { fetchComments } from '../../actions/comment_actions';
 import { createLike, destroyLike } from '../../actions/like_actions';
 
 const mapStateToProps = (state, { match }) => ({
@@ -11,6 +12,7 @@ const mapStateToProps = (state, { match }) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchSingleVideo: (videoId) => dispatch(fetchSingleVideo(videoId)),
+  fetchComments: (videoId) => dispatch(fetchComments(videoId)),
   createLike: (like) => dispatch(createLike(like)),
   destroyLike: (like) => dispatch(destroyLike(like))
 });

@@ -7,6 +7,7 @@ json.video do
   json.comment_ids @video.comment_ids
   json.like_ids @video.like_ids
   json.likes @video.likes
+  json.posted @video.posted_date
 end
 
 json.comments do
