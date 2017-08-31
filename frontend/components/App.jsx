@@ -14,7 +14,6 @@ const App = () => (
       <NavbarContainer />
     </header>
     <Route exact path='/' />
-    // Need added route for the full container videoshowcontainer
     <ProtectedRoute path='/upload' component={UploadFormContainer}/>
     <Route path='/videos/:videoId' component={VideoShowContainer}/>
     <AuthRoute path='/login' component={SessionFormContainer}/>

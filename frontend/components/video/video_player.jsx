@@ -10,6 +10,9 @@ class VideoPlayer extends React.Component {
     this.handleVideoLike = this.handleVideoLike.bind(this);
     this.renderLike = this.renderLike.bind(this);
     this.handleVideoLikeDelete = this.handleVideoLikeDelete.bind(this);
+    this.renderSubscribe = this.renderSubscribe.bind(this);
+    this.handleSubscription = this.handleSubscription.bind(this);
+    this.handleSubscriptionDelete = this.handleSubscriptionDelete.bind(this);
   }
 
   componentDidMount() {
@@ -42,6 +45,47 @@ class VideoPlayer extends React.Component {
     });
     this.props.destroyLike(likeId);
   }
+
+  handleSubscription(e) {
+    e.preventDefault();
+    this.props.createSubscription({
+      subscribed_id: this.props.currentVideo.video.uploader_id
+    });
+  }
+
+  handleSubscriptionDelete(e) {
+    e.preventDefault();
+
+    let subId;
+    this.props.currentUser.subscriptions.forEach(sub => {
+      if(this.props.currentUser.id === sub.subscriber_id){
+        subId = sub.id;
+      }
+    });
+    this.props.destroySubscription(subId);
+  }
+
+  renderSubscribe() {
+
+    if(this.props.currentUser.subscribed_channels.includes(this.props.currentVideo.video.uploader_id)){
+      return(
+        <div className='subscriber-div'>
+          <button onClick={this.handleSubscriptionDelete}
+            className='subscribe-button-unsub'>Unsubscribe</button>
+          <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
+        </div>
+      );
+    } else {
+      return(
+        <div className='subscriber-div'>
+          <button onClick={this.handleSubscription}
+            className='subscribe-button'>Subscribe</button>
+          <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
+        </div>
+      );
+    }
+  }
+
 
   renderLike() {
 
@@ -92,13 +136,11 @@ class VideoPlayer extends React.Component {
               </div>
               {Object.keys(this.props.currentVideo).length !== 0 &&
                 <div className='user-details'>
-                    <Link className='username-video'
-                      to={`/users/${this.props.currentVideo.video.uploader_id}`}>{this.props.currentVideo.video.uploader_username}</Link>
+                  <Link className='username-video'
+                    to={`/users/${this.props.currentVideo.video.uploader_id}`}>{this.props.currentVideo.video.uploader_username}
+                  </Link>
                   <br/>
-                  <div className='subscriber-div'>
-                    <button className='subscribe-button'>Subscribe</button>
-                    <div className='subscriber-count'>10</div>
-                  </div>
+                  {this.renderSubscribe()}
                 </div>
               }
               {Object.keys(this.props.currentVideo).length !== 0 &&

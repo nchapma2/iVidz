@@ -79,6 +79,21 @@
   border-radius: 2px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
+  outline: none;
+  width: 78px;
+}
+
+.subscribe-button-unsub {
+  border: none;
+  color: #e62117;
+  background: white;
+  border: 1px solid lightgrey;
+  cursor: pointer;
+  border-radius: 2px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  outline: none;
+  width: 78px;
 }
 
 .subscribe-button:hover {
@@ -177,7 +192,7 @@
 
 .view-count {
   align-self: flex-end;
-  margin-left: 400px;
+  margin-left: 380px;
   font-size: 16px;
   color: grey;
 }

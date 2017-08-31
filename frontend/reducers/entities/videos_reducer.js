@@ -5,6 +5,7 @@ import { RECEIVE_LIKE, DESTROY_LIKE } from '../../actions/like_actions';
 const nullState = {
   currentVideo: {},
   videoList: [],
+  subCount: 0,
 };
 
 
@@ -32,6 +33,7 @@ const VideosReducer = ( state = nullState, action ) => {
       let likes = newState.currentVideo.video.likes.filter(like => like.id !== action.like.id);
       newState.currentVideo.video.like_ids = like_ids;
       newState.currentVideo.video.likes = likes;
+
       return newState;
     default:
       return state;
