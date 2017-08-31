@@ -1,5 +1,3 @@
-@videos.each do |video|
-  json.set! video.id do
-    json.partial! '/videos/video', video: video
-  end
+json.array! @videos.each do |video|
+    json.partial! '/api/videos/video', video: video
 end

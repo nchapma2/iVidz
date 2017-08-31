@@ -6,6 +6,7 @@ import NavbarContainer from './navbar/navbar_container';
 import UploadFormContainer from './video/upload_form_container';
 import VideoPlayerContainer from './video/video_player_container';
 import VideoShowContainer from './video/video_show_container';
+import VideoListContainer from './video/video_list_container';
 
 
 const App = () => (
@@ -13,7 +14,7 @@ const App = () => (
     <header className='header'>
       <NavbarContainer />
     </header>
-    <Route exact path='/' />
+    <Route exact path='/' component={VideoListContainer}/>
     <ProtectedRoute path='/upload' component={UploadFormContainer}/>
     <Route path='/videos/:videoId' component={VideoShowContainer}/>
     <AuthRoute path='/login' component={SessionFormContainer}/>

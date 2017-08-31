@@ -1,5 +1,5 @@
 import { merge } from 'lodash';
-import { RECEIVE_SINGLE_VIDEO } from '../../actions/video_actions';
+import { RECEIVE_SINGLE_VIDEO, RECEIVE_VIDEOS } from '../../actions/video_actions';
 import { RECEIVE_LIKE, DESTROY_LIKE } from '../../actions/like_actions';
 import { RECEIVE_SUBSCRIPTION, DESTROY_SUBSCRIPTION } from '../../actions/subscription_actions';
 
@@ -14,6 +14,8 @@ const VideosReducer = ( state = nullState, action ) => {
   Object.freeze(state);
   let newState;
   switch(action.type) {
+    case RECEIVE_VIDEOS:
+      return Object.assign({}, state, { videoList: action.videos });
     case RECEIVE_SINGLE_VIDEO:
       return Object.assign({}, state, { currentVideo: action.video });
     case RECEIVE_LIKE:

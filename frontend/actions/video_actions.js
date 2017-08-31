@@ -4,17 +4,28 @@ import { receiveErrors } from './session_actions';
 export const RECEIVE_SINGLE_VIDEO = 'RECEIVE_SINGLE_VIDEO';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_FILE = 'RECEIVE_FILE';
+export const RECEIVE_VIDEOS = 'RECEIVE_VIDEOS';
 
 export const receiveFile = () => ({
   type: RECEIVE_FILE,
 });
 
-export const receiveSingleVideo = (video) => ({
+export const receiveSingleVideo = video => ({
   type: RECEIVE_SINGLE_VIDEO,
   video
 });
 
-export const createVideo = (video) => dispatch => (
+export const receiveVideos = videos => ({
+  type: RECEIVE_VIDEOS,
+  videos
+});
+
+export const fetchVideos = video => dispatch => (
+  VIDUtil.fetchVideos()
+    .then(videos => dispatch(receiveVideos(videos)))
+);
+
+export const createVideo = video => dispatch => (
   VIDUtil.createVideo(video)
     .then((vid) => {
       dispatch(receiveSingleVideo(vid));
