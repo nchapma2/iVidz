@@ -23,6 +23,25 @@ class User < ApplicationRecord
 
   has_many :likes
 
+  has_many :subscriptions,
+  primary_key: :id,
+  foreign_key: :subscriber_id,
+  class_name: 'Subscription'
+
+  has_many :user_subscriptions,
+  primary_key: :id,
+  foreign_key: :subscribed_id,
+  class_name: 'Subscription'
+
+  has_many :subscribed_users,
+  through: :user_subscriptions,
+  source: :subscribed_user
+
+  has_many :subscribed_channels,
+  through: :subscriptions,
+  source: :subscriber
+
+
   attr_reader :password
 
   after_initialize :ensure_session_token
