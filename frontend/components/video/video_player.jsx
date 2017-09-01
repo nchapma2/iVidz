@@ -119,7 +119,7 @@ class VideoPlayer extends React.Component {
     return(
         <div className='video-player-div'>
           {Object.keys(this.props.currentVideo).length !== 0 &&
-            <video className='video-player' controls src={this.props.currentVideo.video.video}>
+            <video className='video-player' controls autoPlay='autoPlay' src={this.props.currentVideo.video.video}>
             </video>
           }
           <br />
