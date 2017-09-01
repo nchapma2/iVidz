@@ -18,6 +18,26 @@ Upon choosing to log in, the user is first directed to a login page with a usern
 
 The implementation of this dual login form required going outside of RESTful conventions. Errors from the username page also needed to be cleared out upon successful redirecting to the password page.
 
+![session-form](/app/assets/images/session-form.gif)
+
 For the dual login form, a new route was created and a 'Check' action was added to the sessions controller; this checks the existence of the username and either returns errors or the valid username. The session form component then re-renders to display the password field.
 
 Clearing out errors required dispatching a 'Clear Errors' to the Session Reducer, which changed the session slice of state to clear errors.
+
+### Subscriptions and Likes
+
+Subscriptions and likes required similar implementations in that they both could be created and destroyed, and had different renderings based on the current user's status. <b>iVidz</b> also kept track of the count of each.
+
+![likes](/app/assets/images/likes.gif)
+
+The components containing these features needed to keep track of the current user in order to display the correct symbol, as well as dispatching the correct action, create or destroy.
+
+## Future Direction
+
+### Search
+
+The site will soon have a fully-functional search bar, along with a larger database of videos to display said search.
+
+### User Channels
+
+Users will soon be able to create and personalize their own channel page, complete with a 'displayed-videos' section for visitors.
