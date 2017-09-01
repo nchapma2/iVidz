@@ -5,7 +5,7 @@
 
 .upload-god {
   border: 1px solid lightgrey;
-  box-shadow: 1px 2px 2px 1px lightgrey;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
   border-radius: 1px 1px 1px 1px;
   padding: 10px;
   width: 40%;
@@ -50,6 +50,7 @@
 
 .category-dropdown {
   outline: none;
+  height: 20px;
 }
 
 .dropzone {
@@ -86,6 +87,7 @@
   margin-left: 80px;
   padding-top: 25px;
   cursor: pointer;
+  outline: none;
 }
 
 .error-list-upload {
@@ -103,6 +105,7 @@
   flex-direction: column;
   width: 250px;
   align-self: center;
+  height: 100%;
 }
 
 .video-upload-description {
@@ -124,7 +127,7 @@
 
 .upload-form input {
   padding: 3px;
-  border: .5px solid lightgrey;
+
 }
 
 .publish-input {
@@ -135,4 +138,65 @@
   color:#fff;
   margin-right:10px;
   padding:10px 10px 10px 10px;
+}
+
+// LOADING ICON
+
+.load-wrapp-true {
+
+  float: left;
+  width:  60px;
+  height: 60px;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+}
+
+.load-wrapp-false {
+    display: none;
+    float: left;
+    width:  60px;
+    height: 60px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+}
+.load-wrapp-false:last-child {margin-right: 0;}
+.ring-2 {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 15px;
+    border: 4px solid #4b9cdb;
+    border-radius: 100%;
+}
+
+.ball-holder {
+    position: absolute;
+    width: 12px;
+    height: 45px;
+    left: 17px;
+    top: 0px;
+}
+
+.ball {
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #4282B3;
+}
+
+
+.load-5 .ball-holder {animation: spinning 1.3s linear infinite;}
+
+@keyframes spinning {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
 }

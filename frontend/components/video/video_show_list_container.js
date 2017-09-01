@@ -4,7 +4,7 @@ import { fetchVideos } from '../../actions/video_actions';
 
 const mapStateToProps = (state) => ({
   videoList: state.entities.videos.videoList,
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({

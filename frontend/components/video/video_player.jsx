@@ -66,25 +66,27 @@ class VideoPlayer extends React.Component {
   }
 
   renderSubscribe() {
-
-    if(this.props.currentUser.subscribed_channels.includes(this.props.currentVideo.video.uploader_id)){
-      return(
-        <div className='subscriber-div'>
-          <button onClick={this.handleSubscriptionDelete}
-            className='subscribe-button-unsub'>Unsubscribe</button>
-          <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
-        </div>
-      );
-    } else {
-      return(
-        <div className='subscriber-div'>
-          <button onClick={this.handleSubscription}
-            className='subscribe-button'>Subscribe</button>
-          <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
-        </div>
-      );
+    if(Object.keys(this.props.currentUser).length !== 0){
+      if(this.props.currentUser.subscribed_channels.includes(this.props.currentVideo.video.uploader_id)){
+        return(
+          <div className='subscriber-div'>
+            <button onClick={this.handleSubscriptionDelete}
+              className='subscribe-button-unsub'>Unsubscribe</button>
+            <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
+          </div>
+        );
+      } else {
+        return(
+          <div className='subscriber-div'>
+            <button onClick={this.handleSubscription}
+              className='subscribe-button'>Subscribe</button>
+            <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
+          </div>
+        );
+      }
     }
   }
+
 
 
   renderLike() {

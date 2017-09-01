@@ -7,13 +7,14 @@ import { withRouter } from 'react-router-dom';
 
 const VideoShowContainer = (props) => {
 
+  // MAKE CONNECTED COMPONENT
   return(
 
     <div className='video-show-container'>
       <div className='left-video'>
         <VideoPlayerContainer match={props.match}/>
         <CommentFormContainer videoId={props.match.params.videoId} match={props.match}/>
-        <CommentIndex videoId={props.match.params.videoId}/>
+        <CommentIndex videoId={props.match.params.videoId} />
       </div>
       <VideoShowListContainer match={props.match}/>
     </div>

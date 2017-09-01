@@ -35,22 +35,24 @@ class CommentIndexItem extends React.Component {
       return like.user_id;
     });
 
-    if(liker_ids.includes(this.props.currentUser.id)){
-      return(
-        <div className='comment-footer'>
-            <div className='like-count-comment'>{this.props.comment.like_ids.length}</div>
-          <img onClick={this.handleCommentLikeDelete}
-            className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
-        </div>
-      );
-    } else {
-      return(
-        <div className='comment-footer'>
-          <div className='like-count-comment-unliked'>{this.props.comment.like_ids.length}</div>
-          <img onClick={this.handleCommentLike}
-            className='like-symbol-unliked' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
-        </div>
-      );
+    if(this.props.currentUser){
+      if(liker_ids.includes(this.props.currentUser.id)){
+        return(
+          <div className='comment-footer'>
+              <div className='like-count-comment'>{this.props.comment.like_ids.length}</div>
+            <img onClick={this.handleCommentLikeDelete}
+              className='like-symbol' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
+          </div>
+        );
+      } else {
+        return(
+          <div className='comment-footer'>
+            <div className='like-count-comment-unliked'>{this.props.comment.like_ids.length}</div>
+            <img onClick={this.handleCommentLike}
+              className='like-symbol-unliked' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
+          </div>
+        );
+      }
     }
   }
 

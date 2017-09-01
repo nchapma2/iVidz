@@ -29,6 +29,9 @@ video2 = Video.create!(title:"Beautiful Music Box", views: rand(10000), category
 Video.create!(title:"Sushi!!!!", views: rand(10000), category:"Food", description:"I wish I had this for lunch, but I don't.", uploader_id: jack.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/Sushi+-+11291.mp4" )
 Video.create!(title:"Oh Shenandoah", views: rand(10000), category:"Beauty & Fashion", description:"This beautiful river makes up the boundaries between Georgia and Alabama. Queen of the South, they call her.", uploader_id: mickey.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/The+Sound+Of+The+Creek+-+10001.mp4")
 video1 = Video.create!(title:"Dad's at it again", views: rand(10000), category:"Education", description:'I caught my dad weed-whacking the grass. I think the lawnmower is broken.', uploader_id: daffy.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/Trimmer+-+11167.mp4" )
+Video.create(title: "Poor Huddled Masses", views: rand(10000), category: "Education", description: "My ancestors came through Ellis Island, I wish everyone could experience what they did, coming to a new world.", uploader_id: daffy.id, video: "https://s3.amazonaws.com/ividz-dev/Statue+Of+Liberty+-+1366.mp4")
+Video.create(title: "Beautiful View", views: rand(10000), category: "Entertainment", description: "This was one of the best vacations we ever took, I managed to get this great shot of my friends overlooking the city.", uploader_id: daffy.id, video: "https://s3.amazonaws.com/ividz-dev/Sightseeing+-+4330.mp4")
+video3 = Video.create(title: "MaN aTTaCkED bY Lil MoNSteRS", views: 1337, category: "Education", description: "I went on vacation and the beach was amazing but don't let this story distract you from the fact that in 1998, The Undertaker threw Mankind off Hell In A Cell, and plummeted 16 ft through an announcer’s table.", uploader_id: daffy.id, video: "https://s3.amazonaws.com/ividz-dev/seeds/IMG_2735.MP4.mp4")
 
 
 Comment.create!(body: 'What a wonderful flower!', author_id: daffy.id, video_id: video.id)
@@ -42,3 +45,11 @@ Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id
 Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video2.id )
 Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video2.id )
 Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video2.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video2.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )
+Comment.create!(body: Faker::Lovecraft.sentence, author_id: ids.sample, video_id: video3.id )

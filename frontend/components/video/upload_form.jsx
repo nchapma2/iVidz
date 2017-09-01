@@ -22,8 +22,10 @@ class UploadForm extends React.Component {
     Object.keys(this.state).forEach((key) => {
       formData.append(`video[${key}]`, this.state[key]);
     });
+    this.props.changeLoad();
     this.props.createVideo(formData)
-      .then((vid) => this.props.history.push(`/videos/${vid.id}`));
+      .then((vid) => this.props.history.push(`/videos/${vid.id}`))
+      .then(() => this.props.changeLoad);
   }
 
   onDrop(file, error) {
@@ -109,6 +111,15 @@ class UploadForm extends React.Component {
           </select>
           <input type='submit' value='PUBLISH' className='publish-input'/>
         </form>
+        <div className={`load-wrapp-${this.props.loading}`}>
+           <div className="load-5">
+               <div className="ring-2">
+                   <div className="ball-holder">
+                       <div className="ball"></div>
+                   </div>
+               </div>
+           </div>
+       </div>
       </div>
       );
     }
