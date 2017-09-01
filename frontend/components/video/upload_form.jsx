@@ -24,7 +24,7 @@ class UploadForm extends React.Component {
     });
     this.props.changeLoad();
     this.props.createVideo(formData)
-      .then((vid) => this.props.history.push(`/videos/${vid.id}`))
+      .then((vid) => this.props.history.push(`/videos/${vid.video.id}`))
       .then(() => this.props.changeLoad);
   }
 
