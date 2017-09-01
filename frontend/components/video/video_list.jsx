@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import VideoListItem from './video_list_item';
 
 class VideoList extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class VideoList extends React.Component {
     }
     return(
       <div className='video-list-container'>
-        <div className='suggested-videos'></div>
+        <div className='suggested-videos'>Suggested Videos</div>
         <div className='video-div'>
           <ul className='video-list'>
             {videos}

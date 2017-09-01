@@ -3,11 +3,83 @@
   position: fixed;
   background-color: white;
   left: 100px;
+  right: 100px;
   top: 100px;
-  width: 100px;
-  height: 100px;
+  width: 1200px;
+  // height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0.5px 0px 0px lightgrey;
 }
 
 .suggested-videos {
   font-size: 16px;
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.video-list {
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 65px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-list-item {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.video-link {
+  width: 200px;
+}
+
+.video-thumbnail {
+  width: 200px;
+  height: 150px;
+}
+
+.video-item-details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+}
+
+.video-item-title {
+  // color: darkred;
+  font-weight: bold;
+}
+
+.video-item-uploader {
+  color: grey;
+  margin-top: 5px;
+}
+
+.video-item-footer {
+  margin-top: 5px;
+
+}
+
+.video-item-views {
+  color: grey;
+  font-size: 12px;
+
+}
+
+.video-item-date {
+  color: grey;
+  font-size: 12px;
+  margin-left: 3px;
 }
