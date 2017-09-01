@@ -24,7 +24,8 @@ class SessionForm extends React.Component {
       username: "guestAccount",
       password: "hunter12",
     };
-    this.props.processForm(user);
+    this.props.processForm(user)
+      .then(() => this.props.clearErrors());
   }
 
   update(property) {
@@ -40,7 +41,8 @@ class SessionForm extends React.Component {
       this.props.checkUsername(this.state.username);
     } else {
       const user = Object.assign({}, this.state);
-      this.props.processForm(user);
+      this.props.processForm(user)
+        .then(() => this.props.clearErrors());
       }
 
   }

@@ -10,6 +10,7 @@ const nullState = {
 
 const uiReducer = ( state = nullState, action ) => {
   Object.freeze(state);
+
   switch(action.type) {
     case CHANGE_LOAD:
       let loading = !state.loading;
