@@ -1,6 +1,11 @@
 
 var path = require("path");
 
+var webpack = require("webpack");
+
+var plugins = [];
+var devPlugins = [];
+
 module.exports = {
   context: __dirname,
   entry: "./frontend/iVidz.jsx",

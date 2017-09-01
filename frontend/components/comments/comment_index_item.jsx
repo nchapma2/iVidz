@@ -57,6 +57,7 @@ class CommentIndexItem extends React.Component {
   }
 
   render() {
+    debugger
     return(
       <li className='comment-item'>
         <img className='comment-avatar'
