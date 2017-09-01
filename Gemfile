@@ -37,6 +37,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'annotate'
 end
 
 group :development do
@@ -56,10 +60,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # additional gems
-gem 'better_errors'
-gem 'binding_of_caller'
-gem 'pry-rails'
-gem 'annotate'
+
 gem 'jquery-rails'
 gem 'faker'
 

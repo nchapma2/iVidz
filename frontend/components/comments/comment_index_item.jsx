@@ -57,7 +57,6 @@ class CommentIndexItem extends React.Component {
   }
 
   render() {
-    debugger
     return(
       <li className='comment-item'>
         <img className='comment-avatar'
@@ -68,7 +67,7 @@ class CommentIndexItem extends React.Component {
               to={`/api/users/${this.props.comment.author_id}`}>
               {this.props.comment.author}
             </Link>
-            <div className='timestamp-comment'>{this.props.comment.posted}</div>
+            <div className='timestamp-comment'>{this.props.comment.posted} ago</div>
           </div>
           <div className='comment-body'>{this.props.comment.body}</div>
           {this.renderLike()}
