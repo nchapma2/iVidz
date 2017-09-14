@@ -19,7 +19,7 @@ class VideoShowList extends React.Component {
 
   render() {
 
-    let videos = this.props.videoList.slice(0,5);
+    let videos = this.props.videoList.slice(0,6);
         videos = videos.map(el => (
           <VideoListItem video={el}
             key={`video-list-item${el.id}`} />
@@ -27,7 +27,7 @@ class VideoShowList extends React.Component {
 
     return(
       <div className='video-show-list-container'>
-        <div className='suggested-show-videos'>Suggested Videos</div>
+        <div className='suggested-show-videos'>You May Also Like</div>
         <div className='video-show-div'>
           <ul className='video-show-list'>
             {videos}

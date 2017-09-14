@@ -103,6 +103,14 @@ class VideoPlayer extends React.Component {
               className='like-symbol-video' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
           </div>
         );
+      } else if(Object.keys(this.props.currentUser).length === 0){
+        return(
+          <div className='like-div'>
+            <div className='like-count-video-unliked'>{this.props.currentVideo.video.like_ids.length}</div>
+            <img
+              className='like-symbol-video-no-user' src="https://s3.amazonaws.com/ividz-dev/thumbsup.png" />
+          </div>
+        );
       } else {
         return(
           <div className='like-div'>

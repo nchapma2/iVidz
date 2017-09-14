@@ -51,7 +51,7 @@ class Navbar extends React.Component {
     return(
     <div className='navbar'>
       <input className='hamburger' type="image"
-        src="http://estes-park.com/sites/all/themes/estesparktwo/images/hamburger.png" />
+        src="https://s3.amazonaws.com/ividz-dev/seeds/hamburger.png" />
       <Link to="/" className='home-link'>
         <img alt='iVidz' className='logo' src={window.logo}></img>
       </Link>

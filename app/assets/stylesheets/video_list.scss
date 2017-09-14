@@ -1,22 +1,15 @@
 .video-list-container {
-  // margin: auto;
   margin-left: 10%;
   margin-right: 10%;
   position: absolute;
   background-color: white;
-  // left: 35px;
-  // right: 100px;
   top: 100px;
-  // width: 1200px;
   width: 80%;
-  // top: 20%;
-  // width: 75%;
-  // left: 12.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid lightgrey;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
+  box-shadow:  0 4px 8px 2px rgba(0, 0, 0, .1);
 }
 
 .suggested-videos {
@@ -40,12 +33,13 @@
 }
 
 .video-list-item {
-  width: 250px;
-  height: 250px;
   display: flex;
-  flex-direction: column;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.video-list-item:nth-child(odd) {
+  background: #efefef;
 }
 
 .video-link {
@@ -60,12 +54,11 @@
 .video-item-details {
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
+  margin: 15px;
 
 }
 
 .video-item-title {
-  // color: darkred;
   font-weight: bold;
 }
 
@@ -76,7 +69,6 @@
 
 .video-item-footer {
   margin-top: 5px;
-
 }
 
 .video-item-views {
