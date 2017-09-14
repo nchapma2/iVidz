@@ -19,7 +19,7 @@ class VideoShowList extends React.Component {
 
   render() {
 
-    let videos = this.props.videoList.slice(0,6);
+    let videos = this.props.videoList.slice(0,7);
         videos = videos.map(el => (
           <VideoListItem video={el}
             key={`video-list-item${el.id}`} />

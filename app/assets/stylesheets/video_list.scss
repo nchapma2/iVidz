@@ -13,14 +13,15 @@
 }
 
 .suggested-videos {
-  font-size: 16px;
+  font-size: 24px;
   color: black;
   font-weight: bold;
   margin-top: 20px;
+  padding-bottom: 3px;
   align-self: flex-start;
   margin-left: 20px;
   margin-bottom: 10px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid lightgrey;
 }
 
 .video-list {
@@ -39,6 +40,21 @@
 }
 
 .video-list-item:nth-child(odd) {
+  background: #efefef;
+}
+
+.video-list-item.home {
+  display: flex;
+  width: 400px;
+  padding: 10px;
+  margin: 15px;
+}
+
+
+.video-list-item.home:nth-child(odd) {
+  background: none;;
+}
+.video-list-item.home:hover {
   background: #efefef;
 }
 

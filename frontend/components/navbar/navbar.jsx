@@ -55,10 +55,15 @@ class Navbar extends React.Component {
       <Link to="/" className='home-link'>
         <img alt='iVidz' className='logo' src={window.logo}></img>
       </Link>
-      <input type='text'
-        placeholder='Search'
-        className='search-input'
-        />
+      <div className='searchbar-div'>
+        <input type='text'
+          placeholder='Search'
+          className='search-input'
+          />
+        <div className='search-icon'>
+          <img className='search-icon-img' alt='search' src="https://s3.amazonaws.com/ividz-dev/seeds/searchicon.png"></img>
+        </div>
+      </div>
       <Link to='/upload' className='upload-link'>
         <img alt='upload' className='upload-icon' src={window.upload}></img>
       </Link>
