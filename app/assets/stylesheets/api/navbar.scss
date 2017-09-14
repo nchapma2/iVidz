@@ -30,11 +30,17 @@
   padding-top:5px;
 }
 
+
 .searchbar-div {
-  left: 25%;
+  left: 20%;
   display: flex;
-  width: 25%;
+  width: 30%;
   height: 60%;
+}
+
+.search-form {
+  height: 100%;
+  width: 100%;
 }
 
 .search-icon {
@@ -44,13 +50,27 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-image: url("https://s3.amazonaws.com/ividz-dev/seeds/searchicon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+.search-button {
+  outline: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.search-button:hover {
+  cursor: pointer;
 }
 
 .search-icon:hover{
-  background: lightgrey;
-  img.search-icon-img {
-    filter: brightness(0%);
-  }
+  filter: brightness(60%);
+  cursor: pointer;
 }
 
 .search-icon-img {
@@ -136,7 +156,7 @@ a.navbar-link{
 }
 
 .upload-icon:hover {
-  filter: brightness(0%);
+  filter: brightness(40%);
 }
 
 

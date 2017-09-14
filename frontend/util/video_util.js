@@ -15,9 +15,22 @@ export const fetchSingleVideo = (videoId) => (
   })
 );
 
-export const fetchVideos = () => (
+export const fetchVideos = (searchTerm) => (
   $.ajax({
     method: 'GET',
-    url: 'api/videos'
+    url: 'api/videos',
+    data: {
+      video: {
+        searchTerm
+      }
+    }
+  })
+);
+
+export const fetchSearchResults = (searchTerm) => (
+  $.ajax({
+    method:'GET',
+    url: 'api/videos',
+    searchTerm
   })
 );

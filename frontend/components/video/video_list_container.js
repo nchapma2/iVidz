@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchVideos: () => dispatch(fetchVideos()),
+  fetchVideos: (searchTerm) => dispatch(fetchVideos(searchTerm)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(VideoList);

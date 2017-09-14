@@ -1,7 +1,12 @@
 class Api::VideosController < ApplicationController
 
   def index
-    @videos = Video.all.shuffle
+    # debugger
+    if video_params[:searchTerm]
+      @videos = Video.search_by_content(video_params[:searchTerm])
+    else
+      @videos = Video.all.shuffle
+    end
   end
 
   def show
@@ -9,7 +14,6 @@ class Api::VideosController < ApplicationController
   end
 
   def create
-
     @video = Video.new(video_params)
     @video.uploader_id = current_user.id
 
@@ -20,15 +24,12 @@ class Api::VideosController < ApplicationController
     end
   end
 
-  def edit
-
-  end
 
   private
 
   def video_params
     params.require(:video).permit(:title, :description,
-    :category, :views, :video)
+    :category, :views, :video, :searchTerm)
   end
 
 end

@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom';
 
 class Navbar extends React.Component {
 
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
-      active: false
+      active: false,
+      search: "",
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
@@ -16,6 +17,16 @@ class Navbar extends React.Component {
     e.preventDefault();
     const setClass = !this.state.active;
     this.setState({ active: setClass });
+  }
+
+  search(e) {
+    e.preventDefault();
+    debugger
+  }
+
+  update() {
+    e.preventDefault();
+    e.currentTarget
   }
 
   greeting() {
@@ -56,13 +67,15 @@ class Navbar extends React.Component {
         <img alt='iVidz' className='logo' src={window.logo}></img>
       </Link>
       <div className='searchbar-div'>
-        <input type='text'
-          placeholder='Search'
-          className='search-input'
-          />
-        <div className='search-icon'>
-          <img className='search-icon-img' alt='search' src="https://s3.amazonaws.com/ividz-dev/seeds/searchicon.png"></img>
-        </div>
+        <form className='search-form' onSubmit={this.search}>
+          <input type='text'
+            placeholder='Search'
+            className='search-input'
+            />
+          <div className='search-icon'>
+            <input className='search-button' type='submit' value=""></input>
+          </div>
+        </form>
       </div>
       <Link to='/upload' className='upload-link'>
         <img alt='upload' className='upload-icon' src={window.upload}></img>

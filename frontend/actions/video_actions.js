@@ -20,8 +20,8 @@ export const receiveVideos = videos => ({
   videos
 });
 
-export const fetchVideos = video => dispatch => (
-  VIDUtil.fetchVideos()
+export const fetchVideos = searchTerm => dispatch => (
+  VIDUtil.fetchVideos(searchTerm)
     .then(videos => dispatch(receiveVideos(videos)))
 );
 
