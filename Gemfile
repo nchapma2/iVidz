@@ -58,6 +58,7 @@ end
 #
 # search implementation
 gem 'pg_search'
+gem 'pg_trgm'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

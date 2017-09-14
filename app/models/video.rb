@@ -1,5 +1,8 @@
 class Video < ApplicationRecord
   include ActionView::Helpers::DateHelper
+  include PgSearch
+
+  pg_search_scope :search_by_content, against: [:title, :description, :category], using: [:tsearch, :trigram]
 
   validates :title, :description, presence: true
   has_attached_file :video,
