@@ -7,12 +7,7 @@ export const changeLoad = () => ({
   type: CHANGE_LOAD
 });
 
-export const receiveSearchResults = () => ({
+export const receiveSearchResults = (searchTerm) => ({
   type: RECEIVE_SEARCH_RESULTS,
   searchTerm
 });
-
-export const fetchResults = searchTerm => dispatch => (
-  VIDUtil.fetchSearchResults()
-    .then(searchTerm => dispatch(receiveSearchResults(searchTerm)))
-);

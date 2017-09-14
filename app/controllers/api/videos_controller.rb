@@ -1,11 +1,10 @@
 class Api::VideosController < ApplicationController
 
   def index
-    # debugger
-    if video_params[:searchTerm]
-      @videos = Video.search_by_content(video_params[:searchTerm])
-    else
+    if !params[:video]
       @videos = Video.all.shuffle
+    else
+      @videos = Video.search_by_content(video_params[:searchTerm])
     end
   end
 

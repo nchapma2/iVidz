@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
-import { fetchResults } from '../../actions/ui_actions';
+import { receiveSearchResults } from '../../actions/ui_actions';
 import Navbar from './navbar';
 
 const mapStateToProps = (state) => ({
@@ -9,7 +9,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
   logout: () => dispatch(logout()),
-  search: (searchTerm) => fetchResults(searchTerm)
+  search: (searchTerm) => dispatch(receiveSearchResults(searchTerm))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

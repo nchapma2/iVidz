@@ -45,7 +45,7 @@
 
 .search-icon {
   background: #efefef;
-  width: 10%;
+  width: 15%;
   border: 1px solid lightgrey;
   align-items: center;
   justify-content: center;
@@ -83,6 +83,7 @@
 .search-input {
   font-size: 14px;
   width: 80%;
+  padding-left: 10px;
 }
 
 .search-input:hover {

@@ -10,6 +10,7 @@ class VideoShowList extends React.Component {
   componentDidMount() {
     this.props.fetchVideos();
   }
+  
 
   componentWillReceiveProps(nextProps) {
     if(nextProps.match.params.videoId !== this.props.match.params.videoId){

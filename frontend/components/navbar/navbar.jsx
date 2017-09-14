@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 class Navbar extends React.Component {
@@ -10,7 +10,9 @@ class Navbar extends React.Component {
       active: false,
       search: "",
     };
+    this.update = this.update.bind(this);
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.search = this.search.bind(this);
   }
 
   toggleDropdown(e) {
@@ -21,12 +23,19 @@ class Navbar extends React.Component {
 
   search(e) {
     e.preventDefault();
-    debugger
+    this.props.search(this.state.search);
+    this.props.history.push('/search');
+    this.setState({
+      search: ""
+    });
+
   }
 
-  update() {
+  update(e) {
     e.preventDefault();
-    e.currentTarget
+    this.setState({
+        search: e.currentTarget.value
+      });
   }
 
   greeting() {
@@ -71,6 +80,7 @@ class Navbar extends React.Component {
           <input type='text'
             placeholder='Search'
             className='search-input'
+            onChange={this.update}
             />
           <div className='search-icon'>
             <input className='search-button' type='submit' value=""></input>
@@ -86,4 +96,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);
