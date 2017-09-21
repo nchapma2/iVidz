@@ -35,12 +35,13 @@
 
 .video-list-item {
   display: flex;
+  // flex-direction: column;
   padding: 10px;
   margin: 15px;
 }
 
 .video-list-item:nth-child(odd) {
-  background: #efefef;
+  // background: #efefef;
 }
 
 .video-list-item.home {
@@ -55,7 +56,6 @@
   background: none;;
 }
 .video-list-item.home:hover {
-  background: #efefef;
   box-shadow: 2px 1px 1px 1px darkgrey;
 }
 

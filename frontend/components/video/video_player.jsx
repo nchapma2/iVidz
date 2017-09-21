@@ -139,20 +139,22 @@ class VideoPlayer extends React.Component {
             </div>
             }
             <div className='user-details-div'>
-              <div className='avatar-square-video'>
+              <div className='left-details'>
+                <div className='avatar-square-video'>
+                  {Object.keys(this.props.currentVideo).length !== 0 &&
+                    <img className='uploader-avatar' src={this.props.currentVideo.video.uploader_avatar} />
+                  }
+                </div>
                 {Object.keys(this.props.currentVideo).length !== 0 &&
-                  <img className='uploader-avatar' src={this.props.currentVideo.video.uploader_avatar} />
+                  <div className='user-details'>
+                    <Link className='username-video'
+                      to={`/users/${this.props.currentVideo.video.uploader_id}`}>{this.props.currentVideo.video.uploader_username}
+                    </Link>
+                    <br/>
+                    {this.renderSubscribe()}
+                  </div>
                 }
               </div>
-              {Object.keys(this.props.currentVideo).length !== 0 &&
-                <div className='user-details'>
-                  <Link className='username-video'
-                    to={`/users/${this.props.currentVideo.video.uploader_id}`}>{this.props.currentVideo.video.uploader_username}
-                  </Link>
-                  <br/>
-                  {this.renderSubscribe()}
-                </div>
-              }
               {Object.keys(this.props.currentVideo).length !== 0 &&
                 <div className='view-count'>{this.props.currentVideo.video.views} views</div>
                 }
@@ -175,4 +177,4 @@ class VideoPlayer extends React.Component {
 }
 
 
-export default VideoPlayer;
+export default withRouter(VideoPlayer);

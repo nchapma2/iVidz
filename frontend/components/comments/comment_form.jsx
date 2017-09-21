@@ -26,8 +26,12 @@ class CommentForm extends React.Component {
 
   makeComment(e) {
     e.preventDefault();
-    const comment = Object.assign({}, this.state, { video_id: this.props.videoId});
-    this.props.createComment(comment);
+    if(Object.keys(this.props.currentUser).length === 0){
+      this.props.history.push('/login');
+    } else {
+      const comment = Object.assign({}, this.state, { video_id: this.props.videoId});
+      this.props.createComment(comment);
+    }
     this.setState({
       body: ""
     });
@@ -59,4 +63,4 @@ class CommentForm extends React.Component {
   }
 }
 
-export default CommentForm;
+export default withRouter(CommentForm);

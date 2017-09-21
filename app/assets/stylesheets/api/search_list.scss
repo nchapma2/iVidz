@@ -34,7 +34,12 @@
   flex-direction: column;
 }
 
+.search-list > li {
+  border-bottom: 2px solid lightgrey;
+  border-radius: 3px;
+}
+
 .video-list-item:hover {
+  border-radius: 3px;
   box-shadow: 2px 1px 1px 1px darkgrey;
-  background: #efefef;
 }
