@@ -35,13 +35,12 @@
 
 .video-list-item {
   display: flex;
-  // flex-direction: column;
   padding: 10px;
   margin: 15px;
 }
 
-.video-list-item:nth-child(odd) {
-  // background: #efefef;
+.video-list-item.home {
+  border-right: 1px solid lightgrey;
 }
 
 .video-list-item.home {

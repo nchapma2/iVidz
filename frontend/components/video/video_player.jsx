@@ -84,6 +84,14 @@ class VideoPlayer extends React.Component {
           </div>
         );
       }
+    } else {
+      return(
+        <div className='subscriber-div'>
+          <button
+            className='subscribe-button'>Subscribe</button>
+          <div className='subscriber-count'>{this.props.currentVideo.video.uploader_sub_count}</div>
+        </div>
+      );
     }
   }
 
